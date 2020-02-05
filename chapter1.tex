@@ -1,0 +1,17 @@
+\begin{exer}
+  Show that equivalent definitions of manifolds are obtained if instead of allowing $U$ to be homeomorphic to \textit{any} open subset of $\mathbb{R}^n$, we require it to be homeomorphic to an open ball in $\mathbb{R}^n$, or to $\mathbb{R}^n$ itself.
+\end{exer}
+
+\begin{proof}
+  It is clear that a ``manifold" satisfying the open-ball or $\mathbb{R}^n$ definition satisfies the open-subset definition.
+  Let $M$ be a manifold satisfying the open-subset definition.
+  Let $x \in M$ be given and let $U, \hat{U}, \phi$ be given according to the definition.
+  Since $\hat{U}$ is open, there exists an open ball $B$ such that $\phi(x) \in B \subset \hat{U}$.
+  Restrict $\phi$ to $\phi^{-1}(B)$.
+  Then $\phi^{-1}(B)$ is an open subset of $M$ containing $x$, and $\phi\mid_{\phi^{-1}(B)}$ is a homeomorphism between $\phi^{-1}(B)$ and $B$.
+  Thus $M$ satisfies the open-ball definition.
+
+  $B(x, r) \subset \mathbb{R}^n$ is homeomorphic to $\mathbb{R}^n$ by the map $(x_1 + a_1, \cdots, x_n + a_n) \mapsto (\frac{a_1}{r - a_1}, \cdots, \frac{a_n}{r - a_n})$ where $x = (x_1, \cdots, x_n)$ is the center of $B(x, r)$ and $r$ is the radius.
+  Since the composition of two homeomorphisms gives a homeomorphism, $M$ also satisfies the $\mathbb{R}^n$ definition as well.
+\end{proof}
+
