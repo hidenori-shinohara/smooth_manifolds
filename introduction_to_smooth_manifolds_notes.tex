@@ -34,6 +34,10 @@
 \newtheorem{notns}[thm]{Notations}
 \newtheorem{addm}[thm]{Addendum}
 \newtheorem{exer}[thm]{Exercise}
+\newtheorem{innercustomexer}{Exercise}
+\newenvironment{customexer}[1]
+  {\renewcommand\theinnercustomexer{#1}\innercustomexer}
+  {\endinnercustomexer}
 
 \theoremstyle{remark}
 \newtheorem{rem}[thm]{Remark}
