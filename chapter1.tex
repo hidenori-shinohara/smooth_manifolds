@@ -15,3 +15,22 @@
   Since the composition of two homeomorphisms gives a homeomorphism, $M$ also satisfies the $\mathbb{R}^n$ definition as well.
 \end{proof}
 
+
+\begin{customexer}{1.6}
+  Showt that $\RP^n$ is Hausdorff and second-countable, and is therefore a topological $n$-manifold.
+\end{customexer}
+
+\begin{proof}
+  Let $[x], [y] \in \RP^n$ be given.
+  Without loss of generality, assume $x, y \in S^{n - 1}$.
+  Let $r = \min\{ \abs{x - y}, \abs{x + y} \} / 2$.
+  Then $q(B(x, r)), q(B(y, r))$ contain $[x], [y]$, respectively.
+  $q^{-1}(U_x), q^{-1}(U_y)$ are both open in $\mathbb{R}^n$, so $U_x, U_y$ are both open in $\RP^n$.
+  Let $[z] \in U_x \cap U_y$.
+  Then $z \in q^{-1}(\{ [z] \}) \subset q^{-1}(U_x \cap U_y) = q^{-1}(U_x) \cap q^{-1}(U_y) = \{ 0 \}$, but $z \ne 0$ because $q: \mathbb{R}^n \setminus \{ 0 \} \rightarrow \RP^n$.
+  Therefore, $U_x, U_y$ are disjoint, so $\RP^n$ is Hausdorff.
+
+  \todo[inline,caption={}]{
+    Show $\RP^n$ is second countable.
+  }
+\end{proof}
