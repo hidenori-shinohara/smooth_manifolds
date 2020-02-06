@@ -89,3 +89,22 @@
       In other words, $x \notin \overline{\bigcup_{X \in \mathcal{X}} X}$.
   \end{enumerate}
 \end{proof}
+
+\begin{customexer}{1.18}
+  Let $M$ be a topologial manifold.
+  Two smooth atlases for $M$ determine the same smooth structure if and only if their union is a smooth atlas.
+\end{customexer}
+
+\begin{proof}
+  Let $\mathcal{A}, \mathcal{A}'$ be two smooth atlases.
+
+  Suppose that they determine the same smooth structure $\mathcal{B}$.
+  Then $\mathcal{A} \cup \mathcal{A}' \subset \mathcal{B}$, so $\mathcal{A} \cup \mathcal{A}'$ must be a smooth atlas.
+  By Proposition 1.17(a), $\mathcal{A} \cup \mathcal{A}'$ determines a unique smooth structure, but it must be $\mathcal{B}$ because $\mathcal{B}$ contains the union.
+
+  On theo ther hand, suppose that thier union is a smooth atlas.
+  Let $\mathcal{B}$ be the smooth structure that the union determines.
+  Such $\mathcal{B}$ must exist by Proposition 1.17(a).
+  By the same proposition, $\mathcal{A}, \mathcal{A}'$ must determine the unique smooth structures.
+  However, they must be $\mathcal{B}$ because $\mathcal{B}$ contains both $\mathcal{A}$ and $\mathcal{A}'$.
+\end{proof}
