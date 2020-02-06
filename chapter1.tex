@@ -21,16 +21,24 @@
 \end{customexer}
 
 \begin{proof}
-  Let $[x], [y] \in \RP^n$ be given.
-  Without loss of generality, assume $x, y \in S^{n - 1}$.
-  Let $r = \min\{ \abs{x - y}, \abs{x + y} \} / 2$.
-  Then $q(B(x, r)), q(B(y, r))$ contain $[x], [y]$, respectively.
-  $q^{-1}(U_x), q^{-1}(U_y)$ are both open in $\mathbb{R}^n$, so $U_x, U_y$ are both open in $\RP^n$.
-  Let $[z] \in U_x \cap U_y$.
-  Then $z \in q^{-1}(\{ [z] \}) \subset q^{-1}(U_x \cap U_y) = q^{-1}(U_x) \cap q^{-1}(U_y) = \{ 0 \}$, but $z \ne 0$ because $q: \mathbb{R}^n \setminus \{ 0 \} \rightarrow \RP^n$.
-  Therefore, $U_x, U_y$ are disjoint, so $\RP^n$ is Hausdorff.
+  From the definition of $\pi$, it is easy to see that $\pi(B(x, r))$ is open in $\RP^n$ where $x \in S^n$ and $0 < r < 1$.
 
-  \todo[inline,caption={}]{
-    Show $\RP^n$ is second countable.
-  }
+  Let $[x], [y] \in \RP^n$ be given.
+  Without loss of generality, assume $x, y \in S^{n}$.
+  Let $r = \min\{ \abs{x - y}, \abs{x + y}, 1 \} / 2$.
+  Then $U_x = \pi(B(x, r)), U_y = \pi(B(y, r))$ contain $[x], [y]$, respectively.
+  $\pi^{-1}(U_x), \pi^{-1}(U_y)$ are both open in $\mathbb{R}^{n + 1} \setminus \{ 0 \}$ which can be seen easily by writing down exactly which points belong to them, so $U_x, U_y$ are both open in $\RP^n$.
+  Then $\pi^{-1}(U_x \cap U_y) = \pi^{-1}(U_x) \cap \pi^{-1}(U_y) = \emptyset$, so $U_x \cap U_y = \emptyset$.
+  Therefore, $\RP^n$ is Hausdorff.
+
+  Let $\mathcal{B} = \{ \pi(B(x, 1 / k)) \mid x \in \mathbb{Q}^{n + 1} \cap S^{n}, k \in \{ 2, 3, 4, \cdots \} \}$.
+  Then $\mathcal{B}$ is a countable collection of open sets whose union is $\RP^n$.
+  Let $U \subset \RP^n$ be a nonempty open set.
+  Let $[x] \in U$.
+  Since $\pi$ is a quotient map, $\pi^{-1}(U)$ is open.
+  Moroever, $x \in \pi^{-1}(U)$.
+  Without loss of generality, $x \in S^{n}$.
+  Then $x \in B(x', 1 / k) \subset \pi^{-1}(U)$ for some $B(x', 1 / k) \in \mathcal{B}$.
+  Then $[x] = \pi(x) \in \pi(B(x', 1 / k)) \subset \pi(\pi^{-1}(U)) = U$.
+  Therefore, $\mathcal{B}$ is a countable basis of $\RP^n$.
 \end{proof}
