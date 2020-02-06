@@ -80,8 +80,12 @@
       This shows that the number of $X \in \mathcal{X}$ that intersects $U$ and the number of $\overline{X} \in \mathcal{X}$ that intersects $U$ are the same.
       Therefore, $\{ \overline{X} : X \in \mathcal{X} \}$ is also locally finite.
     \item
-      \todo[inline,caption={}]{
-        Finish this!
-      }
+      Since the closure of a set is defined to be the intersection of all closed sets containing it, $\bigcup_{X \in \mathcal{X}} \overline{X} \subset \overline{\bigcup_{X \in \mathcal{X}} X}$.
+      Let $x \notin \bigcup_{X \in \mathcal{X}} \overline{X}$.
+      Then there exists a neighborhood $U$ of $x$ such that $U$ intersects only finitely many $X \in \mathcal{X}$.
+      Let $X_1, \cdots, X_n$ denote them.
+      By the same argument as part (a), $\overline{X_1}, \cdots, \overline{X_n}$ are the only elements in $\{ \overline{X} \mid X \in \mathcal{X} \}$ that $U$ intersects.
+      Since $x \notin \overline{X_i}$ for each $i = 1, \cdots, n$, $U^c \cup \overline{X_1} \cup \cdots \cup \overline{X_n}$ is a closed set which contains all $X \in \mathcal{X}$ but does not contain $x$.
+      In other words, $x \notin \overline{\bigcup_{X \in \mathcal{X}} X}$.
   \end{enumerate}
 \end{proof}
