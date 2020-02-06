@@ -52,3 +52,36 @@
   Moreover, the image of a compact set under a continuous map is compact. (See A.45(a))
   Thus $\RP^n$ is compact.
 \end{proof}
+
+\begin{customexer}{1.14}
+  Suppose $\mathcal{X}$ is a locally finite collection of subsets of a topological space $M$.
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      The collection $\{ \overline{X} : X \in \mathcal{X} \}$ is also locally finite.
+    \item
+      $\overline{\bigcup_{X \in \mathcal{X}} X} = \bigcup_{X \in \mathcal{X}} \overline{X}$.
+  \end{enumerate}
+\end{customexer}
+
+\begin{proof}
+  $ $
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      Let $p \in M$.
+      Then there exists an open set $U$ containing $x$ such that there are only finitely many $X \in \mathcal{X}$ such that $U \cap X \ne \emptyset$.
+      Let $X \in \mathcal{X}$.
+      \begin{itemize}
+        \item
+          If $U \cap X \ne \emptyset$, then $U \cap \overline{X} \supset U \cap X \ne \emptyset$.
+        \item
+          If $U \cap X = \emptyset$, then $U^c$ is closed, so $\overline{X} \subset U^c$.
+          In other words, $U \cap \overline{X} = \emptyset$.
+      \end{itemize}
+      This shows that the number of $X \in \mathcal{X}$ that intersects $U$ and the number of $\overline{X} \in \mathcal{X}$ that intersects $U$ are the same.
+      Therefore, $\{ \overline{X} : X \in \mathcal{X} \}$ is also locally finite.
+    \item
+      \todo[inline,caption={}]{
+        Finish this!
+      }
+  \end{enumerate}
+\end{proof}
