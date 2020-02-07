@@ -114,28 +114,10 @@
 \end{customexer}
 
 \begin{proof}
-  First, we consider the special case in which $M$ can be covered by a single chart.
-  Suppose $\phi: M \rightarrow \hat{U} \subset \mathbb{R}^n$ is a global smooth coordinate map.
-  Let $\mathcal{B} = \{ B(x, r) \subset \hat{U} \mid x \in \mathbb{Q}^n, r \in \mathbb{Q}, \exists r' > r, B(x, r') \subset \hat{U} \}$. 
-  $\mathcal{B}' = \{ \phi^{-1}(B) \mid B \in \mathcal{B} \}$ is a countable basis of $M$ consisting of smooth coordinate balls.
-  For each $\phi^{-1}(B(x, r)) \in \mathcal{B}$, there exists $\phi^{-1}(B(x, r')) \in \mathcal{B}$ with $r' > r$.
-  The other properties of a regular coordinate ball are satisfied trivially because $\phi$ is a homeomorhpism.
-  Thus $M$ has a countable basis of regular coordinate balls.
-
-  Now let $M$ be an arbitrary $n$-manifold.
-  By definition, each point of $M$ is in the domain of a chart.
-  Because every open cover of a second-countable space has a countable subcover (Proposition A.16), $M$ is covered by countably many charts $\{ (U_i, \phi_i) \}$.
-  By the argument above, each $U_i$ has a countable basis of regular coordinate balls, and the union $\mathfrak{B}$ forms a countable basis of $M$ consisting of smooth coordinate balls.
-  Choose $\phi_i: U_i \rightarrow \hat{U}_i$ and $\phi_i^{-1}(B(x, r)) \in \mathfrak{B}$ arbitrarily.
-  Then there exists $r' > r$ such that $\phi_i^{-1}(B(x, r)) \subsetneq \phi_i^{-1}(B(x, r')) \in \mathfrak{B}$
-  Since $r' > r$, $\overline{B(x, r)} \subset B(x, r')$.
-  Because $\phi_i$ is a homeomorphism between $U_i$ and $\hat{U}_i$, $\phi^{-1}(\overline{B(x, r)})$ is the closure of $\phi_i^{-1}(B(x, r))$ in $U_i$.
-  Moreover, $\overline{B(x, r)}$ is compact, the closure of $\phi_i^{-1}(B(x, r))$ in $U_i$ is compact.
-  Since $M$ is Hausdorff, the closure of $\phi_i^{-1}(B(x, r))$ in $U_i$ is closed in $M$.
-  In other words, the closure of $\phi_i^{-1}(B(x, r))$ in $U_i$ is exactly the closure of $\phi_i^{-1}(B(x, r))$ in $M$.
-  Therefore, the closure of $\phi^{-1}(B(x, r))$ in $M$ is contained in $\phi^{-1}(B(x, r'))$, so we conclude that $\mathfrak{B}$ is a countable basis of regular coordinate balls.
-
   \todo[inline,caption={}]{
-    This doesn't work because the center of a ball is 0.
+    I thought I had solved this, but I don't think I did.
+    I don't think I understand the definition of regular coordinate balls very well, and that makes it hard for me to solve this problem.
+    In particular, does the $B'$ have to be in the same atlas?
+    Why does the center of $\phi(B)$ have to be 0?
   }
 \end{proof}
