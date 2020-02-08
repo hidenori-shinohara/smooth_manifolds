@@ -1,0 +1,30 @@
+\begin{customexer}{2.1}
+  Let $M$ be a smooth manifold with or without boundary.
+  Show that pointwise multiplication turns $C^{\infty}(M)$ into a commutative ring and a commutative and associative algebra over $\mathbb{R}$.
+\end{customexer}
+
+\begin{proof}
+  $ $
+  \begin{itemize}
+    \item
+      The constant map $f(p) = 0$ is clearly in $C^{\infty}(M)$ and it is the additive identity.
+    \item
+      The constant map $f(p) = 1$ is clearly in $C^{\infty}(M)$ and it is the multiplicative identity.
+    \item
+      Let $f \in C^{\infty}(M), g \in C^{\infty}(M)$.
+      Let $p \in M$ and $(\phi, U)$ be a smooth chart for $p$.
+      Then $f \circ \phi^{-1}$ and $g \circ \phi^{-1}$ are both smooth, real-valued maps defined on an open subset of $\mathbb{R}^n$.
+      Thus $f + g$ is in $C^{\infty}(M)$ 
+      Moreover, $f + g = g + f$ because addition in $\mathbb{R}$ is commutative.
+    \item
+      Let $f, g, h \in C^{\infty}(M)$.
+      Let $p \in M$ and $(\phi, U)$ be a smooth chart for $p$.
+      Then $f \circ \phi^{-1}$ and $g \circ \phi^{-1}$ are both smooth, real-valued maps defined on an open subset of $\mathbb{R}^n$.
+      Therefore, $fg$ is in $C^{\infty}(M)$
+      Moreover, $fg = gf$ and $(fg)h = f(gh)$ because multiplication in $\mathbb{R}$ is commutative and associative.
+    \item
+      Let $c \in \mathbb{R}, f \in C^{\infty}(M)$.
+      Then $cf$ can be seen as $fg$ where $g$ is the constant function whose value is $c$.
+      As shown above, $cf \in C^{\infty}(M)$.
+  \end{itemize}
+\end{proof}
