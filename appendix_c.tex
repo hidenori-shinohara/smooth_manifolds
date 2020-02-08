@@ -1,0 +1,23 @@
+\begin{customexer}{C.1}
+  Suppose that $F: U \rightarrow W$ is differentiable at $a \in U$. Show that the linear map satisfying
+
+  \begin{align*}
+    \lim_{v \rightarrow 0} \frac{\abs{F(a + v) - F(a) - Lv}}{\abs{v}} = 0
+  \end{align*}
+
+  is unique.
+\end{customexer}
+
+\begin{proof}
+  Let $L, L'$ be two such linear maps.
+  \begin{align*}
+    \lim_{v \rightarrow 0} \frac{\abs{Lv - L'v}}{\abs{v}}
+      &= \lim_{v \rightarrow 0} \frac{\abs{(F(a + v) - F(a) - L'v) - (F(a + v) - F(a) - Lv)}}{\abs{v}} \\
+      &= \lim_{v \rightarrow 0} \frac{\abs{F(a + v) - F(a) - Lv}}{\abs{v}} + \lim_{v \rightarrow 0} \frac{\abs{F(a + v) - F(a) - L'v}}{\abs{v}} \\
+      &= 0 + 0 = 0.
+  \end{align*}
+  If $L \ne L'$, $(L - L')v_0 \ne 0$ for some $v_0$.
+  Then $\lim_{v \rightarrow 0} \frac{\abs{Lv - L'v}}{\abs{v}} = \lim_{h \rightarrow 0} \frac{\abs{L(hv_0) - L'(hv_0)}}{\abs{hv_0}} = \frac{\abs{(L - L')v_0}}{\abs{v_0}} \ne 0$.
+  This is a contradiction, so $L = L'$.
+\end{proof}
+
