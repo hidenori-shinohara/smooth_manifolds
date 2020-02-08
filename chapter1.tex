@@ -146,5 +146,12 @@
       Then $x \in U \subset \Int M$ because every point in $U$ is in an interior chart $(\phi, U)$.
       A subspace of $M$ must be Hausdorff and second-countable by Proposition A.17(g, i), so $\Int M$ is a second-countable, Hausdorff space in which every point has a neighborhood homeomorphic to an open subset in $\mathbb{R}^n$.
       Thus $\Int M$ is an $n$-manifold without boundary.
+    \item
+      Since $\partial M = M \setminus \Int M$ and $\Int M$ is open in $M$, $\partial M$ is closed in $M$.
+      Let $x \in \partial M$.
+      Let $(\phi, U)$ be a boundary chart of $x$.
+      If a point $y \in U$ gets mapped into $\Int \mathbb{H}^n$, then it is certainly an interior point.
+      Thus $\phi(U \cap \partial M) \subset \partial \mathbb{H}^n$.
+      Then $\pi_{n - 1} \circ \phi$ is a homeomorphism that maps $U \cap \partiail M$ into an open subset of $\mathbb{R}^{n - 1}$ where $\pi_{n - 1}: (x_1, \cdots, x_n) \mapsto (x_1, \cdots, x_{n - 1 })$.
   \end{enumerate}
 \end{proof}
