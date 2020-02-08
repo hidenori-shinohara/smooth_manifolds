@@ -13,13 +13,13 @@
     \item
       Let $f \in C^{\infty}(M), g \in C^{\infty}(M)$.
       Let $p \in M$ and $(\phi, U)$ be a smooth chart for $p$.
-      Then $f \circ \phi^{-1}$ and $g \circ \phi^{-1}$ are both smooth, real-valued maps defined on an open subset of $\mathbb{R}^n$.
+      Then $f \circ \phi^{-1}$ and $g \circ \phi^{-1}$ are both smooth(Exercise \ref{ex_2_3}), real-valued maps defined on an open subset of $\mathbb{R}^n$.
       Thus $f + g$ is in $C^{\infty}(M)$ 
       Moreover, $f + g = g + f$ because addition in $\mathbb{R}$ is commutative.
     \item
       Let $f, g, h \in C^{\infty}(M)$.
       Let $p \in M$ and $(\phi, U)$ be a smooth chart for $p$.
-      Then $f \circ \phi^{-1}$ and $g \circ \phi^{-1}$ are both smooth, real-valued maps defined on an open subset of $\mathbb{R}^n$.
+      Then $f \circ \phi^{-1}$ and $g \circ \phi^{-1}$ are both smooth(Exercise \ref{ex_2_3}), real-valued maps defined on an open subset of $\mathbb{R}^n$.
       Therefore, $fg$ is in $C^{\infty}(M)$
       Moreover, $fg = gf$ and $(fg)h = f(gh)$ because multiplication in $\mathbb{R}$ is commutative and associative.
     \item
@@ -38,4 +38,18 @@
 \begin{proof}
   $f$ is smooth in the sense just defined if and only if $f^{-1} \circ \Id^{-1}$ is smooth in the sense of ordinary calculus.
   Since $f^{-1} \circ \Id^{-1} = f^{-1}$, $f^{-1} \circ \Id^{-1}$ is smooth in the sense of ordinary calculus if and only if $f^{-1}$ is smooth in the sense of ordinary calculus.
+\end{proof}
+
+\begin{customexer}{2.3}\label{ex_2_3}
+  Let $M$ be a smooth manifold with or without boundary, and suppose $f: M \rightarrow \mathbb{R}^k$ is a smooth function.
+  Show that $f \circ \phi^{-1}: \phi(U) \rightarrow \mathbb{R}^k$ is smooth for every smooth chart $(U, \phi)$ for $M$.
+\end{customexer}
+
+\begin{proof}
+  Let $\phi(x) \in \phi(U)$.
+  Since $f$ is smooth, there exists $(V, \psi)$ such that $f \circ \psi^{-1}: \psi(V) \rightarrow \mathbb{R}^k$ is smooth and $x \in V$.
+  Let $W = U \cap V$.
+  Then $f \circ \psi^{-1}: \psi(W) \rightarrow \mathbb{R}^k$ is smooth and $\psi \circ \phi^{-1}: \phi(W) \rightarrow \psi(W)$ is a diffeomorphism where $\phi(W)$ is a neighborhood of $W$.
+  Then the restriction of $f \circ \psi^{-1}$ to $\phi(W)$ is identical to $(f \circ \psi^{-1}) \circ (\psi \circ \phi^{-1})$.
+  Since he composition of a smooth function is smooth, $f \circ \psi^{-1}$ is smooth.
 \end{proof}
