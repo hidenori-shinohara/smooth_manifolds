@@ -4,7 +4,7 @@
   A \textit{topological $n$-manifold} is a Hausdorff, second-countable topological space each point of which has a neighborhood that is homeomorphic to an open subset $\mathbb{R}^n$.
 \end{defn}
 
-\begin{defn}[Coordinates]\label{topological_manifolds_coordinates}
+\begin{defn}[Coordinates]
   Let $M$ be a topological $n$-manifold.
   Let $U$ be an open subset of $M$, $\hat{U}$ be an open subset of $\mathbb{R}^n$, $\phi: U \rightarrow \hat{U}$ be a homeomorphism.
   \begin{itemize}
@@ -48,3 +48,19 @@
 \begin{defn}[Smooth Manifold]
   A \textit{smooth manifold} is a topological manifold equipped with a smooth structure.
 \end{defn}
+
+\begin{defn}
+  Suppose $(M, \mathcal{A})$ is a smooth manifold.
+  \begin{itemize}
+    \item
+      Any chart $(U, \phi) \in \mathcal{A}$ is called a \textit{smooth chart}.
+    \item
+      Given a smooth chart $(U, \phi)$, $U$ is called a \text{smooth coordinate domain} and $\phi$ is called a \textit{smooth coordinate map}.
+    \item
+      Given a smooth chart $(U, \phi)$, $U$ is called a \textit{smooth coordinate ball} if it is a coordinate ball.
+  \end{itemize}
+\end{defn}
+
+\begin{rem}
+  One must define a smooth structure on a topological manifold before talking about a smooth chart.
+\end{rem}
