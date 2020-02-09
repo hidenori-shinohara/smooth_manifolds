@@ -1,4 +1,4 @@
-\begin{customexer}{1.1}
+\begin{customexer}{1.1}\label{exercise_1_1}
   Show that equivalent definitions of manifolds are obtained if instead of allowing $U$ to be homeomorphic to \textit{any} open subset of $\mathbb{R}^n$, we require it to be homeomorphic to an open ball in $\mathbb{R}^n$, or to $\mathbb{R}^n$ itself.
 \end{customexer}
 
@@ -114,12 +114,25 @@
 \end{customexer}
 
 \begin{proof}
+  Let $M$ be an $n$-dimensional smooth manifold.
+  We consider the special case that there exists a single chart $(\phi, U)$ with $U = M$.
+  Let $x \in \hat{U}$ with rational coordinates.
+  Then there exists $s > 0$ such that $B(x, s) \subset \hat{U}$.
+  For each rational number $r \in (0, s)$, we consider the chart $(p \mapsto \phi(p) - x, \phi^{-1}(B(x, r)))$.
+
+  Let $\mathcal{B}$ be the smooth atlas consisting of all such charts for each $x \in \hat{U}$ and $r$.
+  \begin{itemize}
+    \item
+      $\mathcal{B}$ is a countable collection because $x \in \mathbb{Q}^n$ and $r \in \mathbb{Q}$.
+    \item
+      Let $(p \mapsto \phi(p) - x, \phi^{-1}(B(x, r))) \in \mathcal{B}$ be given.
+      Then there exists a chart $(p \mapsto \phi(p) - x, \phi^{-1}(B(x, r')))$ in $\mathcal{B}$ with $r' > r$.
+      Let $B = \phi^{-1}(B(x, r)), B' = \phi^{-1}(B(x, r'))$.
+      Let $\psi$ denote the map $p \mapsto \phi(p) - x$.
+      Then $\psi(B) = B(0, r)$ and $\psi(B') = B(0, r')$, respectively.
+  \end{itemize}
   \todo[inline,caption={}]{
-    I thought I had solved this, but I don't think I did.
-    I don't think I understand the definition of regular coordinate balls very well, and that makes it hard for me to solve this problem.
-    In particular, does the $B'$ have to be in the same atlas?
-    Why does the center of $\phi(B)$ have to be 0?
-    On top of that, I can't find much information on regular coordinate balls online, which makes me think that this is not a very useful concept.
+    Finish this proof!
   }
 \end{proof}
 
