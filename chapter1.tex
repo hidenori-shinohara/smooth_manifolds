@@ -120,7 +120,27 @@
   Then there exists $s > 0$ such that $B(x, s) \subset \hat{U}$.
   For each rational number $r \in (0, s)$, we consider the chart $(p \mapsto \phi(p) - x, \phi^{-1}(B(x, r)))$.
 
-  Let $\mathcal{B}$ be the smooth atlas consisting of all such charts for each $x \in \hat{U}$ and $r$.
+  Let $\mathcal{B}$ be the collection of all such charts for each $x \in \hat{U}$ and $r$.
+  We claim that $\mathcal{B}$ is a smooth atlas.
+  \begin{itemize}
+    \item
+      Let $p \in M$.
+      Then $\phi(p) \in \hat{U}$.
+      Since $\hat{U}$ is open, $\phi(p) \in B(x, r) \subset \hat{U}$ for some $x$ with rational coordinates and a positive rational number $r$.
+      Then $p \in \phi^{-1}(B(x, r))$, so the union of coordinate domains covers $M$.
+      In other words, $\mathcal{B}$ is an atlas.
+    \item
+      Let $(p \mapsto \phi(p) - x, \phi^{-1}(B(x, r))), (p \mapsto \phi(p) - x', \phi^{-1}(B(x', r'))) \in \mathcal{B}$ be given.
+      Suppose $\phi^{-1}(B(x, r)) \cap \phi^{-1}(B(x', r')) \ne \emptyset$.
+      Let $\psi, \psi'$ denote the coordinate maps.
+      \todo[inline,caption={}]{
+        Finish this!
+      }
+  \end{itemize}
+
+  Since $\mathcal{B}$ is a smooth atlas, there exists a smooth structure $\mathcal{A}$ on $M$ containing $\mathcal{B}$ by Proposition 1.17(a).
+  We claim that $\mathcal{B}$, a subset of the smooth structure $\mathcal{A}$, is a countable basis of regular coordinate balls.
+
   \begin{itemize}
     \item
       $\mathcal{B}$ is a countable collection because $x \in \mathbb{Q}^n$ and $r \in \mathbb{Q}$.
@@ -131,8 +151,9 @@
       Let $\psi$ denote the map $p \mapsto \phi(p) - x$.
       Then $\psi(B) = B(0, r)$ and $\psi(B') = B(0, r')$, respectively.
   \end{itemize}
+
   \todo[inline,caption={}]{
-    Finish this proof!
+    Finish this!
   }
 \end{proof}
 
