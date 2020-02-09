@@ -1,10 +1,10 @@
 \subsection{Topological Manifolds}
 
-\begin{defn}
+\begin{defn}[Topological Manifold]
   A topological $n$-manifold is a Hausdorff, second-countable topological space each point of which has a neighborhood that is homeomorphic to an open subset $\mathbb{R}^n$.
 \end{defn}
 
-\begin{defn}
+\begin{defn}[Coordinates]\label{topological_manifolds_coordinates}
   Let $M$ be a topological $n$-manifold.
   Let $U$ be an open subset of $M$, $\hat{U}$ be an open subset of $\mathbb{R}^n$, $\phi: U \rightarrow \hat{U}$ be a homeomorphism.
   \begin{itemize}
@@ -17,4 +17,11 @@
     \item
       If $\phi(U)$ is an open cube in $\mathbb{R}^n$, $U$ is called a coordinate cube and $\phi$ is called a coordinate map.
   \end{itemize}
+\end{defn}
+
+\subsection{Smooth Manifolds}
+
+\begin{defn}[Transition Map]
+  Let $M$ be a topological $n$-manifold and $(U, \phi), (V, \psi)$ be coordinate charts (\ref{topological_manifolds_coordinates}) such that $U \cap V \ne \emptyset$.
+  $\psi \circ \phi^{-1}: \phi(U \cap V) \mapsto \psi(U \cap V)$ is called a transition map from $\phi$ to $\psi$.
 \end{defn}
