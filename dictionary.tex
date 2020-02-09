@@ -1,7 +1,7 @@
 \subsection{Topological Manifolds}
 
 \begin{defn}[Topological Manifold]
-  A topological $n$-manifold is a Hausdorff, second-countable topological space each point of which has a neighborhood that is homeomorphic to an open subset $\mathbb{R}^n$.
+  A \textit{topological $n$-manifold} is a Hausdorff, second-countable topological space each point of which has a neighborhood that is homeomorphic to an open subset $\mathbb{R}^n$.
 \end{defn}
 
 \begin{defn}[Coordinates]\label{topological_manifolds_coordinates}
@@ -9,34 +9,34 @@
   Let $U$ be an open subset of $M$, $\hat{U}$ be an open subset of $\mathbb{R}^n$, $\phi: U \rightarrow \hat{U}$ be a homeomorphism.
   \begin{itemize}
     \item
-      The pair $(U, \phi)$ is called a coordinate chart or a chart.
+      The pair $(U, \phi)$ is called a \texit{coordinate chart} or a \textit{chart}.
     \item
-      $U$ is called a coordinate domain or a coordinate neighborhood.
+      $U$ is called a \textit{coordinate domain} or a coordinate neighborhood.
     \item
-      If $\phi(U)$ is an open ball in $\mathbb{R}^n$, $U$ is called a coordinate ball.
+      If $\phi(U)$ is an open ball in $\mathbb{R}^n$, $U$ is called a \textit{coordinate ball}.
     \item
-      If $\phi(U)$ is an open cube in $\mathbb{R}^n$, $U$ is called a coordinate cube and $\phi$ is called a coordinate map.
+      If $\phi(U)$ is an open cube in $\mathbb{R}^n$, $U$ is called a \textit{coordinate cube} and $\phi$ is called a \textit{coordinate map}.
   \end{itemize}
 \end{defn}
 
 \begin{defn}[Atlas]
   Let $M$ be a topological $n$-manifold.
-  An atlas for $M$ is a collection of charts $(U_{\alpha}, \phi_{\alpha})$ such that $M = \bigcup_{\alpha} U_{\alpha}$.
+  An \textit{atlas for $M$} is a collection of charts $(U_{\alpha}, \phi_{\alpha})$ such that $M = \bigcup_{\alpha} U_{\alpha}$.
 \end{defn}
 
 \begin{defn}[Transition Map]
-  Let $M$ be a topological $n$-manifold and $(U, \phi), (V, \psi)$ be coordinate charts (\ref{topological_manifolds_coordinates}) such that $U \cap V \ne \emptyset$.
-  $\psi \circ \phi^{-1}: \phi(U \cap V) \mapsto \psi(U \cap V)$ is called a transition map from $\phi$ to $\psi$.
+  Let $M$ be a topological $n$-manifold and $(U, \phi), (V, \psi)$ be coordinate charts such that $U \cap V \ne \emptyset$.
+  $\psi \circ \phi^{-1}: \phi(U \cap V) \mapsto \psi(U \cap V)$ is called a \textit{transition map} from $\phi$ to $\psi$.
 \end{defn}
 
 \subsection{Smooth Manifolds}
 
 \begin{defn}[Smoothly Compatible]
   Let $M$ be a topological $n$-manifold.
-  Two coordinate charts $(U, \phi), (V, \psi)$ are called smoothly compatible if $U \cap V = \emptyset$ or the transition map $\psi \circ \phi^{-1}$ is a diffeomorphism.
+  Two coordinate charts $(U, \phi), (V, \psi)$ are called \textit{smoothly compatible} if $U \cap V = \emptyset$ or the transition map $\psi \circ \phi^{-1}$ is a diffeomorphism.
 \end{defn}
 
 \begin{defn}[Smooth Atlas]
   Let $M$ be a topological $n$-manifold.
-  A smooth atlas is an atlas $\mathcal{A}$ such that any two charts in $\mathcal{A}$ are smoothly compatible with each other.
+  A \textit{smooth atlas} is an atlas $\mathcal{A}$ such that any two charts in $\mathcal{A}$ are smoothly compatible with each other.
 \end{defn}
