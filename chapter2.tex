@@ -88,7 +88,7 @@
   Hence, (a), (b) and the definition are all equivalent.
 \end{proof}
 
-\begin{customexer}{2.7(Proof of Proposition 2.6)}
+\begin{customexer}{2.7(Proof of Proposition 2.6)}\label{exercise_2_7}
   Let $M$ and $N$ be smooth manifolds with or without boundary, and let $F: M \rightarrow N$ be a map.
   \begin{enumerate}[label=(\alph*)]
     \item 
@@ -124,4 +124,35 @@
       Moreover, $\phi\vert_{V \cap U}(V \cap U) \subset \phi(V) \subset W$ and $\psi \circ F \circ (\phi\vert_{V \cap U}(V \cap ))^{-1}$ is clearly smooth.
       Therefore, $F \vert_U$ is smooth.
   \end{enumerate}
+\end{proof}
+
+\begin{customexer}{2.11(Proof of Proposition 2.10)}
+  Let $M, N$ and $P$ be smooth manifolds with or without boundary.
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      Every constant map $c: M \rightarrow N$ is smooth.
+    \item
+      The identity map of $M$ is smooth.
+    \item
+      If $U \subset M$ is an open submanifold with or without boundary, then the inclusion map $U \rightarrow M$ is smooth.
+  \end{enumerate}
+\end{customexer}
+
+\begin{proof}
+  Let $\mathcal{A}_M, \mathcal{A}_N, \mathcal{A}_P$ be smooth structures of $M, N, P$, respectively.
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      $F$ is clearly continuous.
+      Moreover, for every $(U_{\alpha}, \phi_{\alpha}) \in \mathcal{A}_M, (V_{\beta}, \psi_{\beta}) \in \mathcal{A}_N$, $\psi_{\beta} \circ F \circ \phi_{\alpha}^{-1}$ is a constant map, so it is smooth.
+      By \ref{exercise_2_7}, $F$ is smooth.
+    \item
+      \todo[inline,caption={}]{
+        Solve this!
+      }
+    \item
+      \todo[inline,caption={}]{
+        Solve this!
+      }
+  \end{enumerate}
+
 \end{proof}
