@@ -104,9 +104,19 @@
     \item 
       Let $p \in M$.
       Let $U$ be a neighborhood of $p$ such that $F\mid_U$ is smooth.
+      By \ref{exercise_1_44}, $U$ is a smooth manifold with the induced smooth structure $\mathcal{A}_U = \{ (V, \phi) \in \mathcal{A}_M \mid V \subset U \}$.
+      Since $F\mid_U$ is smooth, there exist $(V, \phi) \in \mathcal{A}_U$ and $(W, \psi) \in \mathcal{A}_N$ such that:
+      \begin{itemize}
+        \item
+          $F\mid_U(V) \subset W$.
+        \item
+          $\psi \circ F\mid_U \circ \phi^{-1}:\phi(V) \rightarrow \psi(W)$ is smooth.
+      \end{itemize}
+      Since $V \subset U$, $F(V) \subset W, \psi \circ F \circ \phi^{-1}:\phi(V) \rightarrow \psi(W)$ is smooth, and $(V, \phi) \in \mathcal{A}$.
+      Therefore, $F$ is smooth.
+    \item
       \todo[inline,caption={}]{
-        This problem is a little more complicated than it seems because we need to show that $U$ is a smooth manifold in order to say $F\mid_U$ is smooth.
-        Exercise 1.44 is about that, so I should solve it first.
+        Work on this!
       }
   \end{enumerate}
 \end{proof}
