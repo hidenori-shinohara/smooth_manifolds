@@ -1,0 +1,23 @@
+\begin{customexer}{3.5(Proof of Lemma 3.4)}
+  Suppose $M$ is a smooth manifold with or without boundary, $p \in M, v \in T_pM$, and $f, g \in C^{\infty}(M)$.
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      If $f$ is a constant function, then $vf = 0$.
+    \item
+      If $f(p) = g(p) = 0$, then $v(fg) = 0$.
+  \end{enumerate}
+\end{customexer}
+
+\begin{proof}
+  $ $
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      Let $h$ be the constant function that always takes the value 1.
+      Then $f(p) = ch(p)$ for some $c \in \mathbb{R}$.
+      Then $v(ff) = f(p)vf + f(p)vf$, so $c^2v(h) = c^2v(h) + c^2v(h)$.
+      Therefore, $c^2v(h) = 0$, so $cv(h) = 0$.
+      Since $v$ is linear, this implies $0 = v(ch) = v(f)$, so $v(f) = 0$.
+    \item
+      $v(fg) = f(p)vg + g(p)vf = 0 + 0 = 0$.
+  \end{enumerate}
+\end{proof}
