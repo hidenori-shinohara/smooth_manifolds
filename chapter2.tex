@@ -115,8 +115,13 @@
       Since $V \subset U$, $F(V) \subset W, \psi \circ F \circ \phi^{-1}:\phi(V) \rightarrow \psi(W)$ is smooth, and $(V, \phi) \in \mathcal{A}$.
       Therefore, $F$ is smooth.
     \item
-      \todo[inline,caption={}]{
-        Work on this!
-      }
+      Let $U \subset M$ be an open subset.
+      By \ref{exercise_1_44}, $U$ is a smooth manifold with the induced smooth structure $\mathcal{A}_U = \{ (V, \phi) \in \mathcal{A}_M \mid V \subset U \}$.
+      Let $p \in U$.
+      Then $p \in F$, so there exist $(V, \phi) \in \mathcal{A}_M, (W, \psi) \i \mathcal{A}_N$ such that $F(V) \subset W$ and $\psi \circ F \circ \phi^{-1}: \phi(V) \rightarrow \psi(W)$ is smooth.
+      Then $(V \cap U, \phi\vert_{V \cap U})$ is a chart that is smoothly compatible with every chart in $\mathcal{A}_M$.
+      Therefore, $(V \cap U, \phi\vert_{V \cap U}) \in \mathcal{A}_M$.
+      Moreover, $\phi\vert_{V \cap U}(V \cap U) \subset \phi(V) \subset W$ and $\psi \circ F \circ (\phi\vert_{V \cap U}(V \cap ))^{-1}$ is clearly smooth.
+      Therefore, $F \vert_U$ is smooth.
   \end{enumerate}
 \end{proof}
