@@ -112,3 +112,13 @@
 \begin{defn}[Tangent Space]
   The tangent space $T_pM$ to $M$ at $p$ is the vector space of all derivations of $C^{\infty}(M)$ at $p$.
 \end{defn}
+
+\begin{defn}[Differential]
+  $M, N$ are smooth manifolds with or without boundary, and $F: M \rightarrow N$ is a smooth map.
+  The \textit{differential of $F$ at $p$} is the linear map $dF_p: T_pM \rightarrow T_{F(p)}N$ defined by 
+  \begin{align*}
+    dF_p(v) := f \mapsto v(f \circ F)
+  \end{align*}
+
+  Equivalently, $\forall v \in T_pM, \forall f \in C^{\infty}(N), dF_p(v)(f) = v(f \circ F)$.
+\end{defn}
