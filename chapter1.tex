@@ -83,8 +83,7 @@
       Since the closure of a set is defined to be the intersection of all closed sets containing it, $\bigcup_{X \in \mathcal{X}} \overline{X} \subset \overline{\bigcup_{X \in \mathcal{X}} X}$.
       Let $x \notin \bigcup_{X \in \mathcal{X}} \overline{X}$.
       Then there exists a neighborhood $U$ of $x$ such that $U$ intersects only finitely many $X \in \mathcal{X}$.
-      Let $X_1, \cdots, X_n$ denote them.
-      By the same argument as part (a), $\overline{X_1}, \cdots, \overline{X_n}$ are the only elements in $\{ \overline{X} \mid X \in \mathcal{X} \}$ that $U$ intersects.
+      Let $X_1, \cdots, X_n$ denote them.  By the same argument as part (a), $\overline{X_1}, \cdots, \overline{X_n}$ are the only elements in $\{ \overline{X} \mid X \in \mathcal{X} \}$ that $U$ intersects.
       Since $x \notin \overline{X_i}$ for each $i = 1, \cdots, n$, $U^c \cup \overline{X_1} \cup \cdots \cup \overline{X_n}$ is a closed set which contains all $X \in \mathcal{X}$ but does not contain $x$.
       In other words, $x \notin \overline{\bigcup_{X \in \mathcal{X}} X}$.
   \end{enumerate}
@@ -194,5 +193,52 @@
     \item
       If $n = 0$, then $\partial \mathbb{H}^0 = \emptyset$.
       Thus, the condition that $\phi(U) \cap \partial \mathbb{H}^n \ne \emptyset$ can never be satisfied, so there cannot be any boundary point.
+  \end{enumerate}
+\end{proof}
+
+\begin{customexer}{1.44}
+  Suppose $M$ is a smooth $n$-manifold with boundary and $U$ is an open subset of $M$.
+  Prove the following statements:
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      $U$ is a topological $n$-manifold with boundary, and the atlas consisting of all smooth charts $(V, \phi)$ for $M$ such that $V \subset U$ defines a smooth structure on $U$.
+      With this topology and smooth structure, $U$ is called an \textit{\textbf{open submanifold with boundary}}.
+    \item
+      If $U \subset \Int M$, then $U$ is actually a smooth manifold (without boundary); in this case we call it an \textit{\textbf{open submanifold of M}}.
+    \item
+      $\Int M$ is an open submanifold of $M$ (without boundary).
+  \end{enumerate}
+\end{customexer}
+
+\begin{proof}
+  Let $\mathcal{T}$ denote the topology of $M$ and $\mathcal{A}$ denote the smooth structure of $M$.
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      The subspace topology on $U$ is equivalent to $\mathcal{T}_U = \{ V \in \mathcal{T} \mid V \subset U \}$ because $U$ is open.
+      By Proposition A.17(\ref{exercise_a_18}), $U$ is Hausdorff and second-countable.
+      For every point $p \in U$, there exists a $V \in \mathcal{T}$ with a homeomorphism $\phi: V \rightarrow \hat{V}$ where $\hat{V}$ is an open subset of $\mathbb{R}^n$ (or $\mathbb{H}^n$)
+      Since $U \cap V$ is an open subset of $V$, $\phi$ restricted to $U \cap V$ is a homeomorphism between $U \cap V$ and $\phi(U \cap V)$, which is an open subset of $\mathbb{R}^n$ (or $\mathbb{H}^n$).
+      Therefore, $U$ is a topological $n$-manifold with boundary.
+
+      Let $\mathcal{A}_U = \{ (\phi, V) \in \mathcal{A} \mid V \subset U \}$.
+      Then $\mathcal{A}_U$ is clearly a collection of charts on $U$ whose union covers $U$.
+      Moreover, any two charts in $\mathcal{A}_U$ are clearly smoothly compatible.
+      Let $(\phi, V)$ be a chart on $U$ that is smoothly compatible with every chart in $\mathcal{A}_U$.
+      Let $(\psi, W) \in \mathcal{A}$.
+      Then $(\psi_{W \cap U}, W \cap U)$ is a chart on $M$ and it must be smoothly compatible with every chart in $\mathcal{A}$.
+      Therefore, $(\psi_{W \cap U}, W \cap U) \in \mathcal{A}$, so it must belong to $\mathcal{A}_U$.
+      This implies that $(\phi, V)$ and $(\psi_{W \cap U}, W \cap U)$ are smoothly compatible.
+      Since $V \subset W \cap U$, this implies that $(\phi, V)$ and $(\psi, W)$ are smoothly compatible.
+
+      Thus $(\phi, V)$ is smoothly compatible with every chart in $\mathcal{A}$, so $(\phi, V) \in \mathcal{A}$.
+      This implies that $(\phi, V)$ is in $\mathcal{A}_U$, so $\mathcal{A}_U$ is indeed a maximal smooth atlas.
+    \item
+      \todo[inline,caption={}]{
+        Finish this!
+      }
+    \item
+      \todo[inline,caption={}]{
+        Finish this!
+      }
   \end{enumerate}
 \end{proof}

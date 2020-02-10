@@ -29,6 +29,26 @@
   $\psi \circ \phi^{-1}: \phi(U \cap V) \mapsto \psi(U \cap V)$ is called a \textit{transition map} from $\phi$ to $\psi$.
 \end{defn}
 
+\begin{defn}[Closed Upper Half-Space]
+  $\mathbb{H}^n = \{ (x^1, \cdots, x^n) \in \mathbb{R}^n \mid x^n \geq 0 \}$, and $\partial \mathbb{H}^n = \{ (x^1, \cdots, x^n) \in \mathbb{R}^n \mid x^n = 0 \}$.
+\end{defn}
+
+\begin{defn}[Manifold With Boundary]
+  Let $M$ be a second-countable Hausdorff space and fix $n$.
+  Suppose that for every $p \in M$, one of the following conditions is satisfied:
+  \begin{enumerate}
+    \item
+      There exists a neighborhood $U$ of $p$ and a homeomorphism $\phi:U \rightarrow \hat{U}$ where $\hat{U}$ is an open subset of $\mathbb{R}^n$.
+      $p$ is called an \textit{interior point} and $(U, \phi)$ is called an \textit{interior chart}.
+    \item
+      There exists a neighborhood $U$ of $p$ and a homeomorphism $\phi:U \rightarrow \hat{U}$ where $\hat{U}$ is an open subset of $\mathbb{H}^n$ with $\hat{U} \cap \partial \mathbb{H}^n \ne \emptyset$.
+      $p$ is called a \textit{boundary point} and $(U, \phi)$ is called a \textit{boundary chart}.
+  \end{enumerate}
+  Then $M$ is called an \textit{$n$-dimensional topological manifold with boundary}.
+  Note that every topological manifold is a topological manifold with boundary.
+\end{defn}
+
+
 \subsection{Smooth Manifolds}
 
 \begin{defn}[Smoothly Compatible]
