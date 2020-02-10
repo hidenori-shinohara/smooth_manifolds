@@ -86,7 +86,7 @@
 \end{rem}
 
 \begin{defn}[Smooth Maps]
-  Let $M, N$ be smooth manifolds and $F: M \rightarrow N$ be a map.
+  Let $M, N$ be smooth manifolds with or without boundary and $F: M \rightarrow N$ be a map.
   $F$ is a \textit{smooth map} if for every $p \in M$, there exist smooth charts $(U, \phi)$ containing $p$ and $(V, \psi)$ containing $F(p)$ such that
   \begin{itemize}
     \item
@@ -94,6 +94,11 @@
     \item
       $\psi \circ F \circ \phi^{-1}: \phi(U) \rightarrow \psi(V)$ is smooth.
   \end{itemize}
+\end{defn}
+
+\begin{defn}[Diffeomorphism]
+  Let $M, N$ be smooth manifolds with or without boundary.
+  A diffeomorphism is a smooth map $F: M \rightarrow N$ with a smooth inverse.
 \end{defn}
 
 \subsection{Tangent Vectors}
