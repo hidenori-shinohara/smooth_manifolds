@@ -7,6 +7,7 @@
     \item 
     \item 
     \item 
+      If $\mathcal{B}$ is a basis for the topology of $X$, then $\mathcal{B}_S = \{ B \cap S \mid B \in \mathcal{B} \}$ is a basis for the subspace topology on $S$.
     \item 
       If $X$ is Hausdorff, then so is $S$.
     \item 
@@ -25,6 +26,10 @@
     \item 
     \item 
     \item 
+      The union of $B \cap S$ is $S$.
+      Let $U \cap S$ be an open subset of $S$ where $U$ is open in $X$, and $x \in U \cap S$.
+      Then there exists $B \in \mathcal{B}$ such that $x \in B \subset U$ since $\mathcal{B}$ is a basis.
+      Therefore, $x \in B \cap S \subset U \cap S$ with $B \cap S \in \mathcal{B}_S$.
     \item 
       Let $x \ne y \in S$.
       There exist two disjoint open sets $U, V$ of $X$ containing $x, y$, respectively.
@@ -32,6 +37,6 @@
     \item 
     \item 
       Let $\mathcal{B}$ be a countable basis of $X$.
-      Then $\{ B \cap S \mid B \in \mathcal{B} \}$ is a countable basis of $S$.
+      Then $\{ B \cap S \mid B \in \mathcal{B} \}$ is a countable basis of $S$ by (f).
   \end{enumerate}
 \end{proof}
