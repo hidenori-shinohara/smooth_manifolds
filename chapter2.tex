@@ -53,3 +53,44 @@
   Then the restriction of $f \circ \psi^{-1}$ to $\phi(W)$ is identical to $(f \circ \psi^{-1}) \circ (\psi \circ \phi^{-1})$.
   Since he composition of a smooth function is smooth, $f \circ \psi^{-1}$ is smooth.
 \end{proof}
+
+\begin{customexer}{2.7(Prove Proposition 2.5)}
+  Suppose $M$ and $N$ are smooth manifolds with or without boundary, and $F: M \rightarrow N$ is a map.
+  Then $F$ is smooth if and only if either of the following conditions is satisfied:
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      For every $p \in M$, there exist smooth charts $(U, \phi)$ containing $p$ and $(V, \psi)$ containing $F(p)$ such that $U \cap F^{-1}(V)$ is open in $M$ and the composite map $\psi \circ F \circ \phi^{-1}$ is smooth from $\phi(U \cap F^{-1}(V))$ to $\psi(V)$.
+    \item
+      $F$ is continuous and there exist smooth atlases $\{ (U_{\alpha}, \phi_{\alpha}) \}$ and $\{ (V_{\beta}, \psi_{\beta}) \}$ for $M$ and $N$, respectively, such that for each $\alpha$ and $\beta$, $\psi_{\beta} \circ F \circ \phi_{\alpha}^{-1}$ is a smooth map from $\phi_{\alpha}(U_{\alpha} \cap F^{-1}(V_{\beta}))$ to $\psi_{\beta}(V_{\beta})$.
+  \end{enumerate}
+\end{customexer}
+
+\begin{proof}
+  Let $\mathcal{A}_M$ and $\mathcal{A}_N$ be smooth structures of $M$ and $N$.
+  Suppose $F$ is smooth.
+  By Proposition 2.4, $F$ is continuous.
+  For every $p \in M$ there exist coordinate charts $(U_p, \phi_p)$ containing $p$ and $(V_p, \psi_p)$ containing $F(p)$ such that $F(U_p) \subset V_p$ and $\psi_p \circ F_p \circ \phi_p^{-1}$ is smooth from $\phi_p(U_p)$ to $\psi_p(V_p)$.
+  Then $\{ (U_p, \phi_p) \mid p \in M \} \subset \mathcal{A}_M$ and $A_n \{ (V_p, \psi_p) \mid p \in M \} \subset \mathcal{A}_N$ are smooth atlases.
+  Moreover, for every $(U_p, \phi_p)$ and $(V_q, \psi_q)$, $\psi_q \circ F \circ \phi_p^{-1}$ is a smooth map from $\phi_p(U_p \cap F^{-1}(V_q))$ to $\psi_q(V_q)$ because $\psi_q \circ F \circ \phi^{-1}_p = (\psi_q \circ \psi_p^{-1}) \circ (\psi_p \circ F \circ \phi_p^{-1})$ where $\psi_q \circ \psi_q^{-1}$ and $\psi_p \circ F \circ \phi_p^{-1}$ are smooth.
+  Therefore, the definition implies (b).
+
+  (b) implies (a) because if $F$ is continuous, $F^{-1}(V_{\beta})$ is open in $M$ for every $\beta$, so $U \cap F^{-1}(V)$ is open in $M$.
+
+  Finally, we show that (a) implies the definition.
+  Suppose $F$ satisfies (a).
+  Let $p \in M$.
+  Let $(U, \phi) \in \mathcal{A}_M$ and $(V, \psi) \in \mathcal{A}_N$ be smooth charts satisfying the properties described in (a).
+  Let $U' = U \cap F^{-1}(V)$ and consider $(U', \phi\mid_{U'})$.
+  Then $(U', \phi\mid_{U'}) \in \mathcal{A}_M$ because it must be smoothly compatible with any other smooth coordinate chart in $\mathcal{A}_M$.
+  Moreover, $F(U') \subset V$ and $\psi \circ F \circ (\phi\mid_{U'})^{-1}:\phi(U') \rightarrow \psi(V)$ is smooth.
+  Therefore, (a) implies the definition.
+
+  Hence, (a), (b) and the definition are all equivalent.
+\end{proof}
+
+\begin{customexer}{2.7(Proof of Proposition 2.6)}
+  $ $
+  \todo[inline,caption={}]{
+    Prove this!
+  }
+\end{customexer}
