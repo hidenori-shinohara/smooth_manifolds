@@ -37,6 +37,18 @@
 \end{customexer}
 
 \begin{proof}
-  \todo[inline,caption={}]{
-  }
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      $\forall v, w \in T_pM, \forall c \in \mathbb{R}, \forall f \in C^{\infty}(N)$,
+      \begin{align*}
+        dF_p(cv + w)(f)
+          &= (cv + w)(f \circ F) \\
+          &= (cv)(f \circ F) + w(f \circ F) \\
+          &= c(v(f \circ F)) + w(f \circ F) \\
+          &= c(dF_p(v)(f)) + dF_p(w)(f) \\
+          &= (cdF_p(v))(f) + dF_p(w)(f) \\
+          &= (cdF_p(v) + dF_p(w))(f).
+      \end{align*}
+      Therefore, $dF_p(cv + w) = cdF_p(v) + dF_p(w)$.
+  \end{enumerate}
 \end{proof}
