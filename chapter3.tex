@@ -50,5 +50,22 @@
           &= (cdF_p(v) + dF_p(w))(f).
       \end{align*}
       Therefore, $dF_p(cv + w) = cdF_p(v) + dF_p(w)$.
+    \item
+      $\forall v \in T_pM, f \in C^{\infty}(P)$,
+      \begin{align*}
+        d(G \circ F)_p(v)(f)
+          &= v(f \circ (G \circ F)) \\
+          &= v((f \circ G) \circ F) \\
+          &= (dF_p(v))(f \circ G) \\
+          &= (dG_{F(p)}(dF_p(v)))(f) \\
+          &= ((dG_{F(p)} \circ dF_p)(v))(f) \\
+      \end{align*}
+      Therefore, $d(G \circ F)_p = dG_{F(p)} \circ dF_p$.
+    \item
+      \todo[inline,caption={}]{
+      }
+    \item
+      \todo[inline,caption={}]{
+      }
   \end{enumerate}
 \end{proof}
