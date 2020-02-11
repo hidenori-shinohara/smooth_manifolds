@@ -190,6 +190,7 @@
       Every composition of diffeomorphisms is a diffeomorphism.
     \item
     \item
+      Every diffeomorphism is a homeomorphism and an open map.
     \item
     \item
   \end{enumerate}
@@ -197,11 +198,18 @@
 
 \begin{customexer}{2.16(Proof of Proposition 2.15)}
   $ $ 
+  Let $(M, \mathcal{A}_M), (N, \mathcal{A}_N), (P, \mathcal{A}_P)$ be smooth manifolds, and let $F: M \rightarrow N, G: N \rightarrow P$ be diffeomorphisms.
   \begin{enumerate}[label=(\alph*)]
     \item 
-      Let $(M, \mathcal{A}_M), (N, \mathcal{A}_N), (P, \mathcal{A}_P)$ be smooth manifolds, and let $F: M \rightarrow N, G: N \rightarrow P$ be diffeomorphisms.
       By Proposition 2.10(d), $G \circ F$ and $F^{-1} \circ G^{-1}$ are smooth.
       Then $(G \circ F) \circ (F^{-1} \circ G^{-1})$ and $(F^{-1} \circ G^{-1}) \circ (G \circ F)$ are both the identity map on the corresponding space, so $F^{-1} \circ G^{-1}$ is the smooth inverse of $G \circ F$.
       Therefore, $G \circ F$ is a diffeomorphism.
+    \item
+    \item
+      Proposition 2.4 states that every smooth map is continuous.
+      Thus $F$ and $F^{-1}$ are both continuous.
+      Therefore, $F$ is a homeomorphism and also an open map.
+    \item
+    \item
   \end{enumerate}
 \end{customexer}
