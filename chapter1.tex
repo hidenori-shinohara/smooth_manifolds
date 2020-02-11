@@ -196,6 +196,41 @@
   \end{enumerate}
 \end{proof}
 
+\begin{customexer}{1.41}\label{exercise_1_41}
+  Let $M$ be a topological manifold with boundary.
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      $M$ has a countable basis of precompact coordinate balls and half-balls.
+    \item
+      $M$ is locally compact.
+    \item
+      $M$ is paracompact.
+    \item
+      $M$ is locally path-connected.
+    \item
+      $M$ has countably many components, each of which is an open subset of $M$ and a connected topological manifold with boundary.
+    \item
+      The fundamental group of $M$ is countable.
+  \end{enumerate}
+\end{customexer}
+
+\begin{proof}
+  $ $
+  \begin{enumerate}[label=(\alph*)]
+    \item
+    \item
+    \item
+    \item
+      Let $U \subset M$ be a nonempty open subset and choose $x \in U$.
+      Then there exists a chart $(V, \phi)$ such that $x \in V$.
+      Since $\phi(x)$ is a point in an open set $\phi(U \cap V)$, there exists $r > 0$ such that $B(\phi(x), r) \subset \phi(V)$.
+      Then $N(x, U) = \phi^{-1}(B(\phi(x), r))$ is a path-connected neighborhood of $x$ that is contained in $U \cap V \subset U$.
+      Therefore, $\{ N(x, U) \mid \text{open } U \subset M, x \in U \}$ forms a basis of $M$ consisting of path-connected sets.
+    \item
+    \item
+  \end{enumerate}
+\end{proof}
+
 \begin{customexer}{1.44}\label{exercise_1_44}
   Suppose $M$ is a smooth $n$-manifold with boundary and $U$ is an open subset of $M$.
   Prove the following statements:
