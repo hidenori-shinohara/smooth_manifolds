@@ -40,3 +40,29 @@
       Then $\{ B \cap S \mid B \in \mathcal{B} \}$ is a countable basis of $S$ by (f).
   \end{enumerate}
 \end{proof}
+
+\begin{customexer}{A.24(Proof of Proposition A.23)}\label{exercise_a_24}
+  Suppose $X_1, \cdots, X_k$ are topological spaces, and let $X_1 \times \cdots \times X_k$ be their product space.
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      CHARACTERISTIC PROPERTY: If $B$ is a topological space, a map $F: B \rightarrow X_1 \times \cdots \times X_k$ is continuous if and only if each of its component functions $F_i = \pi_i \circ F: B \rightarrow X_i$ is continuous.
+  \end{enumerate}
+\end{customexer}
+
+\begin{proof}
+  $ $
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      Suppose $F$ is continuous.
+      Since $\pi_i$ is continuous by (c) and the composition of continuous functions is continuous, $\pi_1 \circ F$ is continuous.
+      Suppose each component function is continuous.
+      Let $B_1 \times \cdots \times B_k$ be a basis element of $X_1 \times \cdots \times X_k$.
+      \begin{align*}
+        F^{-1}(B_1 \times \cdots \times B_k)
+          &= F^{-1}(\cap_{i=1}^{k} \pi_i^{-1}(B_1 \times \cdots \times B_k)) \\
+          &= \cap_{i=1}^{k} F^{-1}(\pi_i^{-1}(B_1 \times \cdots \times B_k)) \\
+          &= \cap_{i=1}^{k} (\pi_i \circ F)^{-1}(B_1 \times \cdots \times B_k).
+      \end{align*}
+      Since the intersection of finitely many open sets is open, $F$ is continuous.
+  \end{enumerate}
+\end{proof}
