@@ -127,3 +127,13 @@
 
   Equivalently, $\forall v \in T_pM, \forall f \in C^{\infty}(N), dF_p(v)(f) = v(f \circ F)$.
 \end{defn}
+
+\begin{defn}[Coordinate Vectors]
+  Let $(M, \mathcal{A})$ be a smooth manifold without boundary.
+  Let $p \in M$ and choose a chart $(U, \phi) \in \mathcal{A}$ such that $p \in U$.
+  Then the \textit{coordinate vectors at $p$}, denoted by $\frac{\partial}{\partial x^i}\vert_p$, are derivations $C^{\infty}(U) \rightarrow \mathbb{R}$ such that
+
+  \begin{align*}
+    \frac{\partial}{\partial x^i}\Big{\vert}_p := f \mapsto \frac{\partial}{\partial x^i}\Big{\vert}_{\phi(p)}(f \circ \phi^{-1}).
+  \end{align*}
+\end{defn}
