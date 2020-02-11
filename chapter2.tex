@@ -1,3 +1,4 @@
+\subsection{Exercises}
 \begin{customexer}{2.1}
   Let $M$ be a smooth manifold with or without boundary.
   Show that pointwise multiplication turns $C^{\infty}(M)$ into a commutative ring and a commutative and associative algebra over $\mathbb{R}$.
@@ -54,7 +55,7 @@
   Since he composition of a smooth function is smooth, $f \circ \psi^{-1}$ is smooth.
 \end{proof}
 
-\begin{customexer}{2.7(Prove Proposition 2.5)}
+\begin{customexer}{2.7(Prove Proposition 2.5)}\label{exercise_2_7}
   Suppose $M$ and $N$ are smooth manifolds with or without boundary, and $F: M \rightarrow N$ is a map.
   Then $F$ is smooth if and only if either of the following conditions is satisfied:
   \begin{enumerate}[label=(\alph*)]
@@ -228,3 +229,37 @@
       Therefore, ``diffeomorphic" is an equivalence relation.
   \end{enumerate}
 \end{customexer}
+
+\subsection{Problems}
+
+\begin{customprob}{2-1}
+  Define $f: \mathbb{R} \rightarrow \mathbb{R}$ by
+  \begin{align*}
+    f(x) &= \begin{cases}
+      1, & x \geq 0, \\
+      0, & x < 0.
+    \end{cases}
+  \end{align*}
+  Show that for every $x \in \mathbb{R}$, there are smooth coordinate charts $(U, \phi)$ containing $x$ and $(V, \psi)$ containing $f(x)$ such that $\psi \circ f \circ \phi^{-1}$ is smooth as a map from $\phi(U \cap f^{-1}(V))$ to $\psi(V)$, but $f$ is not smooth in the sense we defined in this chapter.
+\end{customprob}
+
+\begin{proof}
+  $\phi = \psi = \Id$ in this solution.
+
+  If $x \geq 0$, then let $U = \mathbb{R}, V = (0, \infty)$.
+  Then $\phi(U \cap f^{-1}(V)) = [0, \infty)$.
+  Thus $\psi \circ f \circ \phi^{-1}: [0, \infty) \rightarrow (0, \infty)$ is the constant map that sends every number to 1.
+  Therefore, it is smooth.
+
+  If $x < 0$, then let $U = \mathbb{R}, V = (-\infty, 1)$.
+  Then $\phi(U \cap f^{-1}(V)) = (-\infty, 0)$.
+  Thus $\psi \circ f \circ \phi^{-1}: (-\infty, 0) \rightarrow (-\infty, 1)$ is the constant map that sends every number to 0.
+  Therefore, it is smooth.
+
+  It might seem that we can apply (\ref{exercise_2_7}) to show that $f$ is smooth, but (\ref{exercise_2_7}) requires that $U \cap f^{-1}(V)$ be open in $M$.
+
+  $f$ maps the interval $(-1, 1)$ to $\{ 0, 1 \}$.
+  Since the image of a connected set under a continuous map must be connected, $f$ cannot be continuous.
+  By Proposition 2.4, $f$ cannot be smooth.
+\end{proof}
+
