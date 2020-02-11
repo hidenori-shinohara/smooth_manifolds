@@ -156,7 +156,7 @@
   }
 \end{proof}
 
-\begin{customexer}{1.39}
+\begin{customexer}{1.39}\label{exercise_1_39}
   Let $M$ be a topological $n$-manifold with boundary.
   \begin{enumerate}[label=(\alph*)]
     \item
@@ -233,12 +233,13 @@
       Thus $(\phi, V)$ is smoothly compatible with every chart in $\mathcal{A}$, so $(\phi, V) \in \mathcal{A}$.
       This implies that $(\phi, V)$ is in $\mathcal{A}_U$, so $\mathcal{A}_U$ is indeed a maximal smooth atlas.
     \item
-      \todo[inline,caption={}]{
-        Finish this!
-      }
+      Let $p \in U$.
+      Then $p \in \Int M$, so there exists $(\phi, V) \in \mathcal{A}$ such that $p \in V$ and $\phi(V)$ is open in $\mathbb{R}^n$.
+      Then $(\phi\vert_{V \cap U}, V \cap U)$ is a chart that is smoothly compatible with every chart in $\mathcal{A}$, so $(\phi\vert_{V \cap U}, V \cap U) \in \mathcal{A}$.
+      Thus it must be in $\mathcal{A}_U$, so $p \in U$ is an interior point of $U$.
+      Therefore, $U$ is a manifold without boundary.
     \item
-      \todo[inline,caption={}]{
-        Finish this!
-      }
+      By \ref{exercise_1_39}, $\Int M$ is an open subset of $M$.
+      By (b), $\Int M$ is an open submanifold of $M$ without boundary.
   \end{enumerate}
 \end{proof}
