@@ -189,10 +189,13 @@
     \item 
       Every composition of diffeomorphisms is a diffeomorphism.
     \item
+      Every finite product of diffeomorphisms between smooth manifolds is a diffeomorphism.
     \item
       Every diffeomorphism is a homeomorphism and an open map.
     \item
+      The restriction of a diffeomorphism to an open submanifold with or without boundary is a diffeomorphism onto its image.
     \item
+      ``Diffeomorphic" is an equivalence relation on the class of all smooth manifolds with or without boundary.
   \end{enumerate}
 \end{customexer}
 
@@ -209,6 +212,12 @@
       Thus $F$ and $F^{-1}$ are both continuous.
       Therefore, $F$ is a homeomorphism and also an open map.
     \item
+      Let $U \subset M$ be an open subset.
+      By Proposition 2.6(b) (\ref{exercise_2_7}), $F\vert_U$ is smooth.
+      Since $F$ is a homeomorphism as shown in (c), $F(U)$ is an open subset of $N$.
+      Therefore, $F^{-1}\vert_{F(U)}$ is smooth by Proposition 2.6(b) (\ref{exercise_2_7}).
+      Clearly, $F\vert_U$ and $F^{-1}\vert_{F(U)}$ are the inverse of each other.
+      Therefore, $F\vert_U$ is a diffeomorphism.
     \item
   \end{enumerate}
 \end{customexer}
