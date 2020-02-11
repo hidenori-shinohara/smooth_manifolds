@@ -150,7 +150,7 @@
   Since the composition of smooth functions in Euclidean spaces is smooth, $\hat{F}$ is smooth.
 \end{proof}
 
-\begin{customexer}{2.11(Proof of Proposition 2.10)}
+\begin{customexer}{2.11(Proof of Proposition 2.10)}\label{exercise_2_11}
   Let $M, N$ and $P$ be smooth manifolds with or without boundary.
   \begin{enumerate}[label=(\alph*)]
     \item 
@@ -219,5 +219,9 @@
       Clearly, $F\vert_U$ and $F^{-1}\vert_{F(U)}$ are the inverse of each other.
       Therefore, $F\vert_U$ is a diffeomorphism.
     \item
+      By (\ref{exercise_2_11}), the identity map on $M$ is a diffeomorphism, so the reflexive property is satisfied.
+      Moreover, $(F^{-1})^{-1} = F$, so the symmetric property is satisfied.
+      By (a), the composition of two diffeomorphisms is a diffeomorphism, so the transitive property is satisfied.
+      Therefore, ``diffeomorphic" is an equivalence relation.
   \end{enumerate}
 \end{customexer}
