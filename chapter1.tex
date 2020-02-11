@@ -1,3 +1,4 @@
+\subsection{Exercises}
 \begin{customexer}{1.1}\label{exercise_1_1}
   Show that equivalent definitions of manifolds are obtained if instead of allowing $U$ to be homeomorphic to \textit{any} open subset of $\mathbb{R}^n$, we require it to be homeomorphic to an open ball in $\mathbb{R}^n$, or to $\mathbb{R}^n$ itself.
 \end{customexer}
@@ -277,4 +278,34 @@
       By \ref{exercise_1_39}, $\Int M$ is an open subset of $M$.
       By (b), $\Int M$ is an open submanifold of $M$ without boundary.
   \end{enumerate}
+\end{proof}
+
+\subsection{Problems}
+
+\begin{customprob}{1-2}
+  Show that a disjoint union of uncountably many copies of $\mathbb{R}$ is locally Euclidean and Hausdorff, but not second-countable.
+\end{customprob}
+
+\begin{proof}
+  Let $I$ denote an uncountable index set and $X = \coprod_{\alpha \in I} \mathbb{R}$.
+  Let $(x, \alpha_0) \in X$.
+  Define $U = \coprod_{\alpha \in I} U_{\alpha}$ where $U_{\alpha_0} = \mathbb{R}$ and $U_{\alpha} = \emptyset$ when $\alpha \ne \alpha_0$.
+  Then $U$ is an open neighborhood of $(x, \alpha_0)$ that is clearly homeomorhpic to $\mathbb{R}$.
+  Thus $X$ is locally Euclidean.
+
+  Let $(x_1, \alpha_1) \ne (x_2, \alpha_2) \in X$.
+  If $\alpha_1 \ne \alpha_2$, then open neighborhoods of $x_1$ and $x_2$ formed in the same way as above separate the two points.
+  Suppose $\alpha_1 = \alpha_2$.
+  Without loss of generality, $x_1 < x_2$.
+  Define $U = \coprod_{\alpha \in I} U_{\alpha}$ where $U_{\alpha_1} = (-\infty, (x_1 + x_2) / 2)$ and $U_{\alpha} = \emptyset$ when $\alpha \ne \alpha_1$.
+  Similarly, define $V = \coprod_{\alpha \in I} U_{\alpha}$ where $U_{\alpha_1} = ((x_1 + x_2) / 2, \infty)$ and $U_{\alpha} = \emptyset$ when $\alpha \ne \alpha_2$.
+  Then such $U$ and $V$ separate the two points.
+  Therefore, $X$ is Hausdorff.
+
+  Let $\mathcal{B}$ be a basis of $X$.
+  For each $\alpha_0 \in I$, let $U_{\alpha_0} = \coprod_{\alpha \in I} U_{\alpha}$ where $U_{\alpha_0} = \mathbb{R}$ and $U_{\alpha} = \emptyset$ when $\alpha \ne \alpha_0$.
+  Then for each $\alpha_0$, there must exist $B_{\alpha_0} \in \mathcal{B}$ such that $(0, \alpha_0) \in B_{\alpha_0} \subset U_{\alpha_0}$.
+  Clearly, $B_{\alpha} \ne B_{\beta}$ if $\alpha \ne \beta$.
+  Therefore, the cardinality of $\mathcal{B}$ is greater than or equal to that of $I$.
+  Hence, $X$ is not second-countable.
 \end{proof}

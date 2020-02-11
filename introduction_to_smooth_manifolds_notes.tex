@@ -39,6 +39,11 @@
   {\renewcommand\theinnercustomexer{#1}\innercustomexer}
   {\endinnercustomexer}
 
+\newtheorem{innercustomprob}{Problem}
+\newenvironment{customprob}[1]
+  {\renewcommand\theinnercustomprob{#1}\innercustomprob}
+  {\endinnercustomprob}
+
 \theoremstyle{remark}
 \newtheorem{rem}[thm]{Remark}
 \newtheorem{rems}[thm]{Remarks}
