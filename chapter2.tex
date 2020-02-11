@@ -126,6 +126,30 @@
   \end{enumerate}
 \end{proof}
 
+\begin{customexer}{2.9}
+  Suppose $F: M \rightarrow N$ is a smooth map between smooth manifolds with or without boundary.
+  Show that the coordinate representation of $F$ with respect to \textit{every} pair of smooth charts for $M$ and $N$ is smooth.
+\end{customexer}
+
+\begin{proof}
+  Let $(M, \mathcal{A}_M), (N, \mathcal{A}_N)$ be smooth manifolds with or without boundary.
+  Let $F: M \rightarrow N$ be a smooth map.
+  Let $(U, \phi) \in \mathcal{A}_M, (V, \psi) \in \mathcal{A}_N$ be given.
+  We must show that $\hat{F} = \psi \circ F \circ \phi^{-1}$ is a smooth function from $\phi(U \cap F^{-1}(V))$ to $\psi(V)$.
+  Let $\phi(p) \in \phi(U \cap F^{-1}(V))$.
+  Then $p \in M$, so there exist $(U_0, \phi_0) \in \mathcal{A}_M$ and $(V_0, \psi_0) \in \mathcal{A}_N$ such that
+  \begin{itemize}
+    \item
+      $p \in U_0 \subset U \cap F^{-1}(V)$;
+    \item
+      $\phi_0(U_0) \subset V_0$;
+    \item
+      $\psi_0 \circ F \circ \phi_0^{-1}:\phi_0(U_0) \rightarrow \psi(V_0)$ is smooth.
+  \end{itemize}
+  Then $\psi \circ F \circ \phi^{-1} \vert_{\phi(U_0)} = (\psi \circ \psi_0^{-1}) \circ (\psi_0 \circ F \circ \phi_0^{-1}) \circ (\phi_0 \circ \phi)$.
+  Since the composition of smooth functions in Euclidean spaces is smooth, $\hat{F}$ is smooth.
+\end{proof}
+
 \begin{customexer}{2.11(Proof of Proposition 2.10)}
   Let $M, N$ and $P$ be smooth manifolds with or without boundary.
   \begin{enumerate}[label=(\alph*)]
