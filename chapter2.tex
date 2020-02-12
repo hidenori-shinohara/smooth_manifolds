@@ -299,7 +299,7 @@
 \end{customprob}
 
 \begin{proof}
-  Let $\mathcal{A}_1, \cdots, \mathcal{A}_k$ be the smooth structures of $M_1, \cdots, M_k$.
+  Let $\mathcal{A}_{M_1}, \cdots, \mathcal{A}_{M_k}, \mathcal{A}_N$ be the smooth structures of $M_1, \cdots, M_k, N$.
   Let $d_1, \cdots, d_k$ denote the dimensions of $M_1, \cdots, M_n$, respectively.
   Let $d = \sum d_i$.
 
@@ -309,11 +309,28 @@
   We show that $\pi_1$ is smooth and the other cases can be shown similarly.
 
   Let $(x_1, \cdots, x_k) \in M_1 \times \cdots \times M_k$.
-  Then for each $i$, there exist $(U_i, \phi_i) \in \mathcal{A}_i$ and $(V_i, \psi_i) \in \mathcal{A}_i$ such that $x_i \in U_i$ and $\phi_i(U_i) \subset V_i$.
+  Then for each $i$, there exist $(U_i, \phi_i) \in \mathcal{A}_{M_i}$ and $(V_i, \psi_i) \in \mathcal{A}_{M_i}$ such that $x_i \in U_i$ and $\phi_i(U_i) \subset V_i$.
   Then we have $(\phi_1 \times \cdots \times \phi_k)(U_1 \times \cdots \times U_k) \subset V_1 \times \cdots \times V_k$ and the composition $\phi_i \circ \pi_1 \circ (\phi_1 \times \cdots \times \phi_k)^{-1}$ is the projection of the first $d_1$ coordinates from $\mathbb{R}^n$ onto $\mathbb{R}^{d_1}$.
   Therefore, it is clearly smooth, so $\pi_1$ is smooth.
 
+  Suppose each $F_i = \pi_i \circ F: N \rightarrow M_i$ is smooth.
+  Let $p \in N$.
+  Then for each $i$, there exist $(U_i, \phi_i) \in \mathcal{A}_N$ and $(V_i, \psi_i) \in \mathcal{A}_{M_i}$ such that $p \in U_i, F_i(U_i) \subset V_i$ and $\psi_k \circ F_i \circ \phi_i^{-1}$.
+  Let $U = U_1 \cap \cdots \cap U_k$.
+  $U$ is a neighborhood of $p$ and the restriction of $\phi_1$ to $U$ is a homeomorphism.
+  Then we claim that $(\phi_1, U) \in \mathcal{A}_N$ and $(\psi_1 \times \cdots \times \psi_k, V_1 \times \cdots \times V_k) \in \mathcal{A}_{M_1 \times \cdots \times M_k}$ are charts that satisfy the necessary properties.
+  \begin{itemize}
+    \item
+      $F(U) \subset V_1 \times \cdots \times V_k$.
+    \item
+      For each $i$, $\psi_i \circ F_i \circ \phi_1^{-1} = (\psi_i \circ F_i \circ \phi_i^{-1}) \circ (\phi_i \circ \phi_1^{-1}): \phi_1(U) \rightarrow \psi_i(V_i)$ is smooth because the composition of two smooth maps is smooth.
+      Thus $(\psi_1 \circ F_1 \circ \phi_1^{-1}) \times \cdots \times (\psi_k \circ F_k \circ \phi_1^{-1}): \phi_1(U) \rightarrow \psi_1(V_1) \times \cdots \times \psi_k(V_k)$ is smooth.
+      Moreover, $(\psi_1 \times \cdots \times \psi_k) \circ F \circ \phi_1^{-1} = (\psi_1 \circ F_1 \circ \phi_1^{-1}) \times \cdots \times (\psi_k \circ F_k \circ \phi_1^{-1})$.
+  \end{itemize}
+
+  Therefore, $F$ is smooth.
   \todo[inline,caption={}]{
-    Prove the opposite direction.
+    I did not use the condition all the given conditions.
+    I asked about it on Stack Exchange, so revise this solution if necessary.
   }
 \end{proof}
