@@ -184,7 +184,7 @@
   \end{enumerate}
 \end{proof}
 
-\begin{customexer}{2.16(Proof of Proposition 2.15)}
+\begin{customexer}{2.16(Proof of Proposition 2.15)}\label{exercise_2_16}
   $ $
   \begin{enumerate}[label=(\alph*)]
     \item 
@@ -229,6 +229,31 @@
       Therefore, ``diffeomorphic" is an equivalence relation.
   \end{enumerate}
 \end{customexer}
+
+\begin{customexer}{2.19(Proof of Theorem 2.18)}
+  Suppose $M$ and $N$ are smooth manifolds with boundary and $F: M \rightarrow N$ is a diffeomorphism.
+  Then $F(\partial M) = \partial N$, and $F$ restricts to a diffeomorphism from $\Int M$ to $\Int N$.
+\end{customexer}
+
+\begin{proof}
+  Let $\mathcal{A}_M, \mathcal{A}_N$ denote the smooth structures of $M, N$, respectively.
+  Let $p \in \partial M$.
+  Then there exists a chart containing $p$ that sends $p$ to $\partial \mathbb{H}^n$.
+  By Theorem 1.46, every chart containing $p$ sends $p$ to $\partial \mathbb{H}^n$.
+
+  Since $F$ is smooth, there exist $(U, \phi) \in \mathcal{A}_M, (V, \psi) \in \mathcal{A}_N$ such that $F(U) \subset V$ and $\psi \circ F \circ \phi^{-1}$ is a smooth map from $\phi(U)$ to $\psi(V)$.
+  $F^{-1}$ is a homeomorphism by (\ref{exercise_2_16}).
+  Then $(\phi^{-1} \circ F^{-1}, F(U))$ is a coordinate chart around $F(p)$ because we obtain a homeomorphism by restricting the composition of two injective continuous maps to its image.
+  Moreover, we claim that $(\phi^{-1} \circ F^{-1}, F(U))$ is smoothly compatible with every chart in $\mathcal{A}_N$.
+  Let $(\psi_1, V_1) \in \mathcal{A}_N$ be given.
+  Then $(\phi^{-1} \circ F^{-1}) \circ \psi_1^{-1} = (\phi^{-1} \circ F^{-1} \circ \psi^{-1}) \circ (\psi \circ \psi_1^{-1})$, and the composition of two smooth maps is smooth.
+  Therefore, $(\phi^{-1} \circ F^{-1}, F(U)) \in \mathcal{A}_N$, and this chart contains $F(p)$ and sends $F(p)$ to $\partial \mathbb{H}^n$.
+  In other words, $F(p) \in \partial N$.
+
+  \todo[inline,caption={}]{
+    Finish the second part.
+  }
+\end{proof}
 
 \subsection{Problems}
 
