@@ -250,9 +250,13 @@
   Therefore, $(\phi^{-1} \circ F^{-1}, F(U)) \in \mathcal{A}_N$, and this chart contains $F(p)$ and sends $F(p)$ to $\partial \mathbb{H}^n$.
   In other words, $F(p) \in \partial N$.
 
-  \todo[inline,caption={}]{
-    Finish the second part.
-  }
+  Since $F^{-1}$ is also smooth, $F^{-1}(\partial N) \subset \partial M$.
+  $F^{-1}(\partial N) \subset \partial M \implies F(F^{-1}(\partial N)) \subset F(\partial M) \subset \partial N$.
+  Since $F$ is a bijection, $F(F^{-1}(\partial N)) = \partial N$.
+  Therefore, $F(\partial M) = \partial N$.
+
+  This implies that $F(\Int M) = \Int N$.
+  By (\ref{exercise_1_44}(c)) and (\ref{exercise_2_16}(d)), $F$ is a diffeomorphism between $\Int M$ and $\Int N$.
 \end{proof}
 
 \subsection{Problems}
