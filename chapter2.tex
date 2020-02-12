@@ -55,7 +55,7 @@
   Since he composition of a smooth function is smooth, $f \circ \psi^{-1}$ is smooth.
 \end{proof}
 
-\begin{customexer}{2.7(Prove Proposition 2.5)}\label{exercise_2_7}
+\begin{customexer}{2.7(Prove Proposition 2.5)}\label{proof_prop_2_5}
   Suppose $M$ and $N$ are smooth manifolds with or without boundary, and $F: M \rightarrow N$ is a map.
   Then $F$ is smooth if and only if either of the following conditions is satisfied:
   \begin{enumerate}[label=(\alph*)]
@@ -89,7 +89,7 @@
   Hence, (a), (b) and the definition are all equivalent.
 \end{proof}
 
-\begin{customexer}{2.7(Proof of Proposition 2.6)}\label{exercise_2_7}
+\begin{customexer}{2.7(Proof of Proposition 2.6)}\label{proof_prop_2_6}
   Let $M$ and $N$ be smooth manifolds with or without boundary, and let $F: M \rightarrow N$ be a map.
   \begin{enumerate}[label=(\alph*)]
     \item 
@@ -119,7 +119,7 @@
       Let $U \subset M$ be an open subset.
       By \ref{exercise_1_44}, $U$ is a smooth manifold with the induced smooth structure $\mathcal{A}_U = \{ (V, \phi) \in \mathcal{A}_M \mid V \subset U \}$.
       Let $p \in U$.
-      Then $p \in F$, so there exist $(V, \phi) \in \mathcal{A}_M, (W, \psi) \i \mathcal{A}_N$ such that $F(V) \subset W$ and $\psi \circ F \circ \phi^{-1}: \phi(V) \rightarrow \psi(W)$ is smooth.
+      Then $p \in F$, so there exist $(V, \phi) \in \mathcal{A}_M, (W, \psi) \in \mathcal{A}_N$ such that $F(V) \subset W$ and $\psi \circ F \circ \phi^{-1}: \phi(V) \rightarrow \psi(W)$ is smooth.
       Then $(V \cap U, \phi\vert_{V \cap U})$ is a chart that is smoothly compatible with every chart in $\mathcal{A}_M$.
       Therefore, $(V \cap U, \phi\vert_{V \cap U}) \in \mathcal{A}_M$.
       Moreover, $\phi\vert_{V \cap U}(V \cap U) \subset \phi(V) \subset W$ and $\psi \circ F \circ (\phi\vert_{V \cap U}(V \cap ))^{-1}$ is clearly smooth.
@@ -169,7 +169,7 @@
     \item 
       $F$ is clearly continuous.
       Moreover, for every $(U_{\alpha}, \phi_{\alpha}) \in \mathcal{A}_M, (V_{\beta}, \psi_{\beta}) \in \mathcal{A}_N$, $\psi_{\beta} \circ F \circ \phi_{\alpha}^{-1}$ is a constant map, so it is smooth.
-      By \ref{exercise_2_7}, $F$ is smooth.
+      By (\ref{proof_prop_2_5}), $F$ is smooth.
     \item
       Let $p \in M$.
       Choose $(U, \phi) \in \mathcal{A}_M$ such that $p \in U$.
@@ -217,9 +217,9 @@
       Therefore, $F$ is a homeomorphism and also an open map.
     \item
       Let $U \subset M$ be an open subset.
-      By (\ref{exercise_2_7}), $F\vert_U$ is smooth.
+      By (\ref{proof_prop_2_6}), $F\vert_U$ is smooth.
       Since $F$ is a homeomorphism as shown in (c), $F(U)$ is an open subset of $N$.
-      Therefore, $F^{-1}\vert_{F(U)}$ is smooth by (\ref{exercise_2_7}).
+      Therefore, $F^{-1}\vert_{F(U)}$ is smooth by (\ref{proof_prop_2_6}).
       Clearly, $F\vert_U$ and $F^{-1}\vert_{F(U)}$ are the inverse of each other.
       Therefore, $F\vert_U$ is a diffeomorphism.
     \item
@@ -281,7 +281,7 @@
   Thus $\psi \circ f \circ \phi^{-1}: (-\infty, 0) \rightarrow (-\infty, 1)$ is the constant map that sends every number to 0.
   Therefore, it is smooth.
 
-  It might seem that we can apply (\ref{exercise_2_7}) to show that $f$ is smooth, but (\ref{exercise_2_7}) requires that $U \cap f^{-1}(V)$ be open in $M$.
+  It might seem that we can apply (\ref{proof_prop_2_5}) to show that $f$ is smooth, but (\ref{proof_prop_2_5}) requires that $U \cap f^{-1}(V)$ be open in $M$.
 
   $f$ maps the interval $(-1, 1)$ to $\{ 0, 1 \}$.
   Since the image of a connected set under a continuous map must be connected, $f$ cannot be continuous.
