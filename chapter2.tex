@@ -292,3 +292,28 @@
   By Proposition 2.4, $f$ cannot be smooth.
 \end{proof}
 
+\begin{customprob}{2-2(Proof of Proposition 2.12)}
+  Suppose $M_1, \cdots, M_k$ and $N$ are smooth manifolds with or without boundary, such that at most one of $M_1, \cdots, M_k$ has nonempty boundary.
+  For each $i$, let $\pi_i: M_1 \times \cdots \times M_k \rightarrow M_i$ denote the projection onto the $M_i$ factor.
+  A map $F: N \rightarrow M_1 \times \cdots \times M_k$ is smooth if and only if each of the component maps $F_i = \pi_i \circ F: N \rightarrow M_i$ is smooth.
+\end{customprob}
+
+\begin{proof}
+  Let $\mathcal{A}_1, \cdots, \mathcal{A}_k$ be the smooth structures of $M_1, \cdots, M_k$.
+  Let $d_1, \cdots, d_k$ denote the dimensions of $M_1, \cdots, M_n$, respectively.
+  Let $d = \sum d_i$.
+
+  First, suppose that $F$ is smooth.
+  By (\ref{exercise_2_11}), the composition of smooth maps is smooth.
+  Thus it suffices to show that $\pi_i: M_1 \times \cdots \times M_k \rightarrow M_i$ is smooth for each $i$.
+  We show that $\pi_1$ is smooth and the other cases can be shown similarly.
+
+  Let $(x_1, \cdots, x_k) \in M_1 \times \cdots \times M_k$.
+  Then for each $i$, there exist $(U_i, \phi_i) \in \mathcal{A}_i$ and $(V_i, \psi_i) \in \mathcal{A}_i$ such that $x_i \in U_i$ and $\phi_i(U_i) \subset V_i$.
+  Then we have $(\phi_1 \times \cdots \times \phi_k)(U_1 \times \cdots \times U_k) \subset V_1 \times \cdots \times V_k$ and the composition $\phi_i \circ \pi_1 \circ (\phi_1 \times \cdots \times \phi_k)^{-1}$ is the projection of the first $d_1$ coordinates from $\mathbb{R}^n$ onto $\mathbb{R}^{d_1}$.
+  Therefore, it is clearly smooth, so $\pi_1$ is smooth.
+
+  \todo[inline,caption={}]{
+    Prove the opposite direction.
+  }
+\end{proof}
