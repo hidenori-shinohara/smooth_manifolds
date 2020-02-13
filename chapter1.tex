@@ -324,20 +324,30 @@
   Let $(p, q) \in M \times N$.
   Then $p \in M$, so there exists a chart $(U, \phi)$ such that $p \in U$ and $\hat{U} = \phi(U) \subset \mathbb{R}^m$.
 
-  Suppose $q \in \Int N$.
-  Then there exists a chart $(V, \psi)$ such that $\hat{V} = \psi(V) \subset \mathbb{R}^n$.
-  $\phi \times \psi$ is a homeomorphism between $U \times V$ and $\hat{U} \times \hat{V} \subset \mathbb{R}^m \times \mathbb{R}^n = \mathbb{R}^{m + n}$.
-  Thus $(U \times V, \phi \times \psi)$ is a chart for $(p, q)$.
-
-  Suppose $q \in \bd N$.
-  Then there exists a chart $(V, \psi)$ such that $\hat{V} = \psi(V) \subset \mathbb{H}^n$ and $\psi(q) \in \partial \mathbb{H}^n$.
-  $\phi \times \psi$ is a homeomorphism between $U \times V$ and $\hat{U} \times \hat{V} \subset \mathbb{R}^m \times \mathbb{H}^n = \mathbb{H}^{m + n}$.
-  Moreover, $(\phi \times \psi)(p, q) = (\phi(p), \psi(q)) \in \mathbb{R}^m \times \mathbb{H}^n = \mathbb{H}^{m + n}$.
-  Thus $(U \times V, \phi \times \psi)$ is a boundary chart for $(p, q)$.
+  \begin{itemize}
+    \item
+      Suppose $q \in \Int N$.
+      Then there exists a chart $(V, \psi)$ such that $\hat{V} = \psi(V) \subset \mathbb{R}^n$.
+      $\phi \times \psi$ is a homeomorphism between $U \times V$ and $\hat{U} \times \hat{V} \subset \mathbb{R}^m \times \mathbb{R}^n = \mathbb{R}^{m + n}$.
+      Thus $(U \times V, \phi \times \psi)$ is a chart for $(p, q)$.
+    \item
+      Suppose $q \in \bd N$.
+      Then there exists a chart $(V, \psi)$ such that $\hat{V} = \psi(V) \subset \mathbb{H}^n$ and $\psi(q) \in \partial \mathbb{H}^n$.
+      $\phi \times \psi$ is a homeomorphism between $U \times V$ and $\hat{U} \times \hat{V} \subset \mathbb{R}^m \times \mathbb{H}^n = \mathbb{H}^{m + n}$.
+      Moreover, $(\phi \times \psi)(p, q) = (\phi(p), \psi(q)) \in \mathbb{R}^m \times \mathbb{H}^n = \mathbb{H}^{m + n}$.
+      Thus $(U \times V, \phi \times \psi)$ is a boundary chart for $(p, q)$.
+  \end{itemize}
 
   Therefore, $M \times N$ is a topological manifold with boundary and $\partial (M \times N) = M \times (\partial N)$.
 
-  \todo[inline,caption={}]{
-    Prove the existence of a smooth structure.
-  }
+  Let $\mathcal{A}_M, \mathcal{A}_N$ be the smooth structures of $M, N$.
+  Define $\mathcal{A}_{M \times N} = \{ (U \times V, \phi \times \psi) \mid (U, \phi) \in \mathcal{A}_M, (V, \psi) \in \mathcal{A}_N \}$.
+  Then $\mathcal{A}_{M \times N}$ is an atlas because we showed earlier that each $(U \times V, \phi \times \psi)$ is a chart.
+  Let $(U_1 \times V_1, \phi_1 \times \psi_1), (U_2 \times V_2, \phi_2 \times \psi_2) \in \mathcal{A}_{M \times N}$.
+  Then $(\phi_2 \times \psi_2) \circ (\phi_1 \times \psi_1)^{-1} = (\phi_2 \circ \phi_1^{-1}) \times (\psi_2 \circ \psi_1^{-1})$ is a smooth map from $(\phi_1 \times \psi_1)(U_1 \times V_1)$ into $(\phi_2 \times \psi_2)(U_2 \times V_2)$.
+  Thus every pair of charts in $\mathcal{A}_{M \times N}$ is smoothly compatible.
+  In other words, $\mathcal{A}_{M \times N}$ is a smooth atlas.
+
+  On the other hand, $\mathcal{A}_{M \times N}$ must be maximal because the restriction of any smoothly compatible chart to $M, N$ gives a smoothly compatible chart, which must belong to $\mathcal{A}_M, \mathcal{A}_N$, respectively.
+  Thus $M \times N$ is a smooth manifold with boundary.
 \end{proof}
