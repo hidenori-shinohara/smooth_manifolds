@@ -1,0 +1,31 @@
+\begin{customexer}{4.3(Verification of Example 4.2)}
+  Verify the following claims:
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      Suppose $M_1, \cdots, M_k$ are smooth manifolds.
+      Then each of the projection maps $\pi_i: M_1 \times \cdots \times M_k \rightarrow M_i$ is a smooth submersion.
+  \end{enumerate}
+\end{customexer}
+
+\begin{proof}
+   $ $
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      Let $d_1, \cdots, d_k$ denote the dimensions of $M_1, \cdots, M_k$, respectively.
+      Let $M = M_1 \times \cdots \times M_k$.
+
+      (\ref{problem_2_2}) implies that $\pi_i$ is smooth for each $i$ by setting $F = \Id: M \rightarrow M$.
+      Let $p = (p_1, \cdots, p_k) \in M$.
+      Thus it suffices to show that the dimension of $d(\pi_i)_p(T_p(M))$ is the same as the dimension of $T_{p_i}(M_i)$.
+
+      By Proposition 3.12, $\dim(T_p(M)) = \sum d_i$.
+      Since the $\alpha$ defined in (\ref{problem_3_2}) is an isomorphism,
+      \begin{equation}\label{exercise_4_3_eq_1}
+        \dim(d(\pi_1)_p(T_p(M)) \oplus \cdots \oplus d(\pi_k)_p(T_p(M))) = \dim(T_p(M)) = \sum d_i.
+      \end{equation}
+
+      However, for each $i$, $d(\pi_i)_p(T_p(M)) \subset T_{p_i}M_i$.
+      Thus $\dim(d(\pi_i)_p(T_p(M))) \leq \dim(T_{p_i}M_i) = d_i$.
+      By (\ref{exercise_4_3_eq_1}), $\dim(d(\pi_i)_p(T_p(M))) = \dim(T_{p_i}M_i)$.
+  \end{enumerate}
+\end{proof}

@@ -1,3 +1,4 @@
+\subsection{Exercises}
 \begin{customexer}{3.5(Proof of Lemma 3.4)}
   Suppose $M$ is a smooth manifold with or without boundary, $p \in M, v \in T_pM$, and $f, g \in C^{\infty}(M)$.
   \begin{enumerate}[label=(\alph*)]
@@ -74,4 +75,29 @@
       By combining (b) and (c), we obtain $dF_p$ and $dF^{-1}_{F(p)}$ are the inverse of each other.
       Therefore, $dF_p$ is an isomorphism.
   \end{enumerate}
+\end{proof}
+
+\subsection{Problems}
+
+\begin{customprob}{3.2(Proof of Proposition 3.14)}\label{problem_3_2}
+  Let $M_1, \cdots, M_k$ be smooth manifolds, and for each $j$, let $\pi_j: M_1 \times \cdots \times M_k \rightarrow M_j$ be the projection onto the $M_j$ factor.
+  For any point $p = (p_1, \cdots, p_k) \in M_1 \times \cdots \times M_k$, the map
+  \begin{align*}
+    \alpha: T_p(M_1 \times \cdots \times M_k) \rightarrow T_{p_1}M_1 \oplus \cdots \times T_{p_k}M_k
+  \end{align*}
+
+  defined by
+
+  \begin{align*}
+    \alpha(v) = (d(\pi_1)_p(v), \cdots, d(\pi_k)_p(v))
+  \end{align*}
+
+  is an isomorphism.
+  The same is true if one of the spaces $M_i$ is a smooth manifold with boundary.
+\end{customprob}
+
+\begin{proof}
+  \todo[inline,caption={}]{
+    Solve this!
+  }
 \end{proof}
