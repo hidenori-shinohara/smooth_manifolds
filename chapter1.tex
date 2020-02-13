@@ -309,3 +309,35 @@
   Therefore, the cardinality of $\mathcal{B}$ is greater than or equal to that of $I$.
   Hence, $X$ is not second-countable.
 \end{proof}
+
+\begin{customprob}{1-12(Proof of Proposition 1.45)}
+  Suppose $M_1, \cdots, M_k$ are smooth manifolds and $N$ is a smooth manifold with boundary.
+  Then $M_1 \times \cdots \times M_k \times N$ is a smooth manifold with boundary, and $\partial (M_1 \times \cdots \times M_k \times N) = M_1 \times \cdots \times M_k \times \partial N$.
+\end{customprob}
+
+\begin{proof}
+  By Example 1.34, $M_1 \times \cdots \times M_k$ is a smooth manifold.
+  Thus it suffices to show that $M \times N$ is a smooth manifold with boundary if $M$ is a smooth manifold and $N$ is a smooth manifold with boundary.
+  Let $m, n$ be the dimensions of $M, N$.
+
+  First, we show that $M \times N$ is a topological manifold with boundary and $\partial(M \times N) = M \times \partial N$.
+  Let $(p, q) \in M \times N$.
+  Then $p \in M$, so there exists a chart $(U, \phi)$ such that $p \in U$ and $\hat{U} = \phi(U) \subset \mathbb{R}^m$.
+
+  Suppose $q \in \Int N$.
+  Then there exists a chart $(V, \psi)$ such that $\hat{V} = \psi(V) \subset \mathbb{R}^n$.
+  $\phi \times \psi$ is a homeomorphism between $U \times V$ and $\hat{U} \times \hat{V} \subset \mathbb{R}^m \times \mathbb{R}^n = \mathbb{R}^{m + n}$.
+  Thus $(U \times V, \phi \times \psi)$ is a chart for $(p, q)$.
+
+  Suppose $q \in \bd N$.
+  Then there exists a chart $(V, \psi)$ such that $\hat{V} = \psi(V) \subset \mathbb{H}^n$ and $\psi(q) \in \partial \mathbb{H}^n$.
+  $\phi \times \psi$ is a homeomorphism between $U \times V$ and $\hat{U} \times \hat{V} \subset \mathbb{R}^m \times \mathbb{H}^n = \mathbb{H}^{m + n}$.
+  Moreover, $(\phi \times \psi)(p, q) = (\phi(p), \psi(q)) \in \mathbb{R}^m \times \mathbb{H}^n = \mathbb{H}^{m + n}$.
+  Thus $(U \times V, \phi \times \psi)$ is a boundary chart for $(p, q)$.
+
+  Therefore, $M \times N$ is a topological manifold with boundary and $\partial (M \times N) = M \times (\partial N)$.
+
+  \todo[inline,caption={}]{
+    Prove the existence of a smooth structure.
+  }
+\end{proof}
