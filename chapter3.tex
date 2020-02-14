@@ -79,6 +79,31 @@
 
 \subsection{Problems}
 
+\begin{customprob}{3-1}
+  Suppose $M$ and $N$ are smooth manifolds with or without boundary, and $F: M \rightarrow N$ is a smooth map.
+  Show that $dF_p: T_pM \rightarrow T_{F(p)}N$ is the zero map for each $p \in M$ if and only if $F$ is constant on each component of $M$.
+\end{customprob}
+
+\begin{proof}
+  \todo[inline,caption={}]{
+    Show the other direction.
+  }
+  Suppose $F$ is constant on each component of $M$.
+  Let $p \in M$.
+  Choose a chart $(U, \phi) \in \mathcal{A}_M$ such that $p \in U$.
+  Then $F \circ \phi^{-1}$ is constant in a neighborhood around $\phi(p)$.
+  For any $i$,
+  \begin{align*}
+    dF_p(\frac{\partial}{\partial x^i}\vert_p)(f)
+      &= \frac{\partial}{\partial x^i}\vert_p(f \circ F) \\
+      &= \frac{\partial}{\partial x^i}\vert_{\phi(p)}(f \circ F \circ \phi^{-1}) \\
+      &= 0
+  \end{align*}
+  because $f \circ F \circ \phi^{-1}$ is constant in a neighborhood around $\phi(p)$.
+  By Proposition 3.15, $\partial / \partial x^i\vert_p$ form a basis for $T_pM$.
+  Since $dF_p$ sends each basis element to 0, $dF_p = 0$.
+\end{proof}
+
 \begin{customprob}{3-2(Proof of Proposition 3.14)}\label{problem_3_2}
   Let $M_1, \cdots, M_k$ be smooth manifolds, and for each $j$, let $\pi_j: M_1 \times \cdots \times M_k \rightarrow M_j$ be the projection onto the $M_j$ factor.
   For any point $p = (p_1, \cdots, p_k) \in M_1 \times \cdots \times M_k$, the map
