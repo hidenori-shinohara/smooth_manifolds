@@ -79,25 +79,82 @@
 
 \subsection{Problems}
 
-\begin{customprob}{3.2(Proof of Proposition 3.14)}\label{problem_3_2}
+\begin{customprob}{3-2(Proof of Proposition 3.14)}\label{problem_3_2}
   Let $M_1, \cdots, M_k$ be smooth manifolds, and for each $j$, let $\pi_j: M_1 \times \cdots \times M_k \rightarrow M_j$ be the projection onto the $M_j$ factor.
   For any point $p = (p_1, \cdots, p_k) \in M_1 \times \cdots \times M_k$, the map
   \begin{align*}
-    \alpha: T_p(M_1 \times \cdots \times M_k) \rightarrow T_{p_1}M_1 \oplus \cdots \times T_{p_k}M_k
+    \alpha: T_p(M_1 \times \cdots \times M_k) \rightarrow T_{p_1}M_1 \oplus \cdots \oplus T_{p_k}M_k
   \end{align*}
-
   defined by
-
   \begin{align*}
     \alpha(v) = (d(\pi_1)_p(v), \cdots, d(\pi_k)_p(v))
   \end{align*}
-
   is an isomorphism.
   The same is true if one of the spaces $M_i$ is a smooth manifold with boundary.
 \end{customprob}
 
 \begin{proof}
-  \todo[inline,caption={}]{
-    Solve this!
-  }
+  It suffices to show this for the case that $k = 2$ because the results extend to arbitrary $k$ by induction.
+  Let $\mathcal{A}_{M_1}, \mathcal{A}_{M_2}, \mathcal{A}_{M_1 \times M_2}$ be the smooth structures of $M_1, M_2, M_1 \times M_2$.
+
+  We first define a lot of notations.
+  \begin{itemize}
+    \item
+      Let $d_1, d_2$ denote the dimensions of $M_1, M_2$ and let $d = d_1 + d_2$ denote the dimension of $M_1 \times M_2$.
+    \item
+      Let $p = (p_1, p_2) \in M_1 \times M_2$ be given.
+      Choose $(U, \phi = (x^i)) \in \mathcal{A}_{M_1}, (V, \psi = (y^i)) \in \mathcal{A}_{M_2}$ with $p_1 \in U$ and $p_2 \in V$.
+      Let $q_1 = \phi(p_1), q_2 = \psi(p_2), q = q_1 \times q_2$.
+    \item
+      $(U \times V, (z^i)) \in \mathcal{A}_{M_1 \times M_2}$ and $(p_1, p_2) \in U \times V$ where $(z^i) = \phi \times \psi$.
+      More specifically, $z^i = x^i \circ \pi_1$ for $1 \leq i \leq d_1$ and $z^i = y^i \circ \pi_2$ for $d_1 + 1 \leq i \leq d_1 + d_2$.
+  \end{itemize}
+  Note that we use $x^i, y^i, z^i, \pi_1$ to mean two different things in this solution: 
+  \begin{itemize}
+    \item
+      $x^i$ is either the $i$th coordinate function of $\phi$ or the $i$th projection map $\mathbb{R}^{d_1} \rightarrow \mathbb{R}$.
+    \item
+      $y^i$ is either the $i$th coordinate function of $\psi$ or the $i$th projection map $\mathbb{R}^{d_2} \rightarrow \mathbb{R}$.
+    \item
+      $z^i$ is either the $i$th coordinate function of $\phi \times \psi$ or the $i$th projection map $\mathbb{R}^{d_1 + d_2} \rightarrow \mathbb{R}$.
+    \item
+      $\pi_1$ is either the projection map $M_1 \times M_2 \rightarrow M_1$ or the projection map $\mathbb{R}^{d_1 + d_2} \rightarrow \mathbb{R}^{d_1}$.
+    \item
+      $\pi_2$ is either the projection map $M_1 \times M_2 \rightarrow M_2$ or the projection map $\mathbb{R}^{d_1 + d_2} \rightarrow \mathbb{R}^{d_2}$.
+  \end{itemize}
+
+  By Proposition 3.15, $\{ \partial / \partial x^1 \vert_{p_1}, \cdots, \partial / \partial x^{d_1} \vert_{p_1} \}, \{ \partial / \partial y^1 \vert_{p_2}, \cdots, \partial / \partial y^{d_2} \vert_{p_2} \}, \{ \partial / \partial z^1 \vert_{p}, \cdots, \partial / \partial z^{d_1 + d_2} \vert_{p} \}$ form bases for $T_{p_1}M_1, T_{p_2}M_2, T_p(M_1 \times M_2)$.
+
+  $\alpha(\partial / \partial z^1 \vert_p) = (d(\pi_1)_p(\partial/\partial z^1\vert_p), d(\pi_2)_p(\partial/\partial z^1\vert_p))$.
+  We claim that $d(\pi_1)_p(\partial / \partial z^1 \vert_p) = \partial / \partial x^1 \vert p_1$.
+
+  \begin{align*}
+    d(\pi_1)_p(\partial / \partial z^1 \vert_p)(f)
+      &= d(\pi_1)_p(d(\phi^{-1} \times \psi^{-1})_q)(\frac{\partial}{\partial z^1}\vert_q) (f)\\
+      &= (d(\pi_1)_p \circ d(\phi^{-1} \times \psi^{-1})_q)(\frac{\partial}{\partial z^1}\vert_q) (f)\\
+      &= d(\pi_1 \circ (\phi^{-1} \times \psi^{-1})_q)(\frac{\partial}{\partial z^1}\vert_q) (f)\\
+      &= \lim_{h \rightarrow 0} \frac{(f \circ \pi_1 \circ (\phi^{-1} \times \psi^{-1}))(q + e_1h) - (f \circ \pi_1 \circ (\phi^{-1} \times \psi^{-1}))(q)}{h} \\
+      &= \lim_{h \rightarrow 0} \frac{(f \circ \pi_1)(\phi^{-1}(q_1 + e_1h), p_2) - (f \circ \pi_1)(p)}{h} \\
+      &= \lim_{h \rightarrow 0} \frac{f(\phi^{-1}(q_1 + e_1h)) - f(p_1)}{h} \\
+      &= \lim_{h \rightarrow 0} \frac{f(\phi^{-1}(q_1 + e_1h)) - f(\phi^{-1}(q_1))}{h} \\
+      &= (\frac{\partial}{\partial x^1}\vert_{q_1})(f \circ \phi^{-1}) \\
+      &= d(\phi^{-1})_{q_1}(\frac{\partial}{\partial x^1}\vert_{q_1})(f) \\
+      &= (\frac{\partial}{\partial x^1}\vert_{p_1})(f).
+  \end{align*}
+
+  The same result can be shown for the other combinations of $\pi_1, \pi_2$ and $z^1, \cdots, z^{d_1 + d_2}$.
+  For any $c_1, \cdots, c_{d_1 + d_2} \in \mathbb{R}$,
+  \begin{align*}
+    \alpha(\sum_{i=1}^{d_1 + d_2} c_{i}\frac{\partial}{\partial z^{i}}\vert_p)
+      &= \sum_{i=1}^{d_1 + d_2} c_i\alpha(\frac{\partial}{\partial z^{i}}\vert_p) \\
+      &= \sum_{i=1}^{d_1 + d_2} c_i(d(\pi_1)_p\frac{\partial}{\partial z^{i}}\vert_p, d(\pi_2)_p\frac{\partial}{\partial z^i}\vert_p) \\
+      &= \sum_{i=1}^{d_1} c_i(d(\pi_1)_p\frac{\partial}{\partial z^{i}}\vert_p, d(\pi_2)_p\frac{\partial}{\partial z^i}\vert_p) 
+         + \sum_{i=d_1 + 1}^{d_2} c_i(d(\pi_1)_p\frac{\partial}{\partial z^{i}}\vert_p, d(\pi_2)_p\frac{\partial}{\partial z^i}\vert_p) \\
+      &= \sum_{i=1}^{d_1} c_i(\frac{\partial}{\partial x^i} \vert_{p_1}, 0)
+         + \sum_{i=1}^{d_2} c_{d_1 + i}(0, \frac{\partial}{\partial y^i} \vert_{p_2}) \\
+      &= (c_1\frac{\partial}{\partial x^1}\vert_{p_1} + \cdots + c_{d_1}\frac{\partial}{\partial x^{d_1}}\vert_{p_1},
+          c_{d_1 + 1}\frac{\partial}{\partial y^{1}}\vert_{p_2} + \cdots + c_{d_1 + d_2}\frac{\partial}{\partial y^{d_2}}\vert_{p_2}).
+  \end{align*}
+
+  Therefore, $\alpha$ is bijective.
 \end{proof}
