@@ -29,5 +29,5 @@ for ch in range(1, total_chapter_number + 1):
     bar = ''
     for i in range(exercise_cnt[ch - 1] + problem_cnt[ch - 1]):
         bar += '#'
-    print("Chapter %d: " + bar)
+    print("Chapter " + str(ch) + ": " + bar)
 
