@@ -337,3 +337,34 @@
 
   Therefore, $F$ is smooth.
 \end{proof}
+
+\begin{customprob}{2-3}\label{problem_2_3}
+  For each of the following maps between spheres, compute sufficiently many coordinate representations to prove that it is smooth.
+
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      $p_n: S^1 \rightarrow S^1$ is the $n$th power map for $n \in \mathbb{Z}$, given in complex notation by $p_n(z) = z^n$.
+    \item
+      $\alpha: S^n \rightarrow S^n$ is the antipodal map $\alpha(x) = -x$.
+    \item
+      $F: S^3 \rightarrow S^2$ is given by $F(w, z) = (z\overline{w} + w\overline{z}, iw\overline{z} - iz\overline{w}, z\overline{z} - w\overline{w})$ where we think of $S^3$ as the subset $\{ (w, z) : \abs{w}^2 + \abs{z}^2 = 1 \}$ of $\mathbb{C}^2$.
+  \end{enumerate}
+\end{customprob}
+
+\begin{proof}
+  $ $
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      Example 1.31 shows the existence of a smooth structure of $S^1$ and let $\mathcal{A}$ denote it.
+      Let $p \in S^1$.
+      Then there exists a chart $(U_i^{\pm}, \phi_i^{\pm})$ in $\mathcal{A}$ around $p$.
+      Let $\hat{p}$ denote $\phi_i^{\pm}(p)$.
+      Suppose that it is $U_2^{+}$.
+      (The following argument works with other cases with minor modifications.)
+      We will consider the restriction of $\phi_i^{+}$ to $(\hat{p} - \epsilon, \hat{p} - \epsilon)$ for some $\epsilon > 0$.
+      For a sufficiently small $\epsilon > 0$, $f(\phi_i^{+}((\hat{p} - \epsilon, \hat{p} + \epsilon)))$ is covered by a single chart $(U_j^{\pm}, \phi_j^{\pm})$.
+      Suppose that it is $(U_2^{+}, \phi_2^{+})$.
+      (Again, this argument works with other cases with minor modifications.)
+      Then the composition $\phi_2^{+} \circ f \circ (\phi_2^{+})^{-1}$ is equal to $x \mapsto \cos(n(\arccos(x)))$, which is clearly smooth.
+  \end{enumerate}
+\end{proof}
