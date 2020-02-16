@@ -85,9 +85,26 @@
 \end{customprob}
 
 \begin{proof}
-  \todo[inline,caption={}]{
-    Show the other direction.
-  }
+  Suppose $dF_p: T_pM \rightarrow T_{F(p)}N$ is the zero map for each $p \in M$.
+  It suffices to show that for every $p \in M$, there exists a neighborhood of $p$ on which $F$ is constant.
+  Let $p \in M$ and $(U, \phi) \in \mathcal{A}_M, (V, \psi) \i \mathcal{A}_N$ be given such that $p \in U$ and $F(U) \subset V$.
+  Without loss of generality, we assume $\hat{U} = \phi(U)$ is an open ball in $\mathbb{R}^m$.
+  Then for any $i, j$ and for any $q \in \hat{U}$,
+  \begin{align*}
+    dF_q(\frac{\partial}{\partial x^i}\vert_q)(\pi_j \circ \psi) = 0
+      &\implies (\frac{\partial}{\partial x^i}\vert_q)(\pi_j \circ \psi \circ F) = 0 \\
+      &\implies (\frac{\partial}{\partial x^i}\vert_{\phi(q)})(\pi_j \circ \psi \circ F \circ \phi^{-1}) = 0.
+  \end{align*}
+  Fix $j$.
+  Then every partial derivative of $\pi_j \circ \psi \circ F \circ \phi^{-1}$ at every point in $\hat{U}$ is 0.
+  The intermediate value theorem implies that $\pi_j \circ \psi \circ F \circ \phi^{-1}$ is constant on $\hat{U}$ because $\hat{U}$ is an open ball.
+  In other words, $(\pi_j \circ \psi \circ F \circ \phi^{-1})(\hat{U}) = \{ y_j \}$ for some $y_j \in \mathbb{R}$.
+  Since this is true for every $j$ and $\pi_j$ is the projection of the $j$th coordinate, $(\psi \circ F \circ \phi^{-1})(\hat{U}) = \{ y \}$ where $y = (y_1, \cdots, y_n)$.
+  Then $(F \circ \phi^{-1})(\hat{U}) = F(U) = \psi^{-1}(y)$.
+  Since $\psi$ is a homeomorphism, there exists exactly one point in $\psi^{-1}(U)$.
+  In other words, $F$ is constant on $U$.
+  Therefore, $F$ is constant on each path component.
+
   Suppose $F$ is constant on each component of $M$.
   Let $p \in M$.
   Choose a chart $(U, \phi) \in \mathcal{A}_M$ such that $p \in U$.
