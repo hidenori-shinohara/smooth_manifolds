@@ -373,8 +373,20 @@
       Then $(U_i^{\mp}, \phi_i^{\mp})$ is a chart containing $\alpha(p)$.
       Then $\phi_i^{\mp} \circ \alpha \circ \phi_i^{\pm}$ is the map $x \mapsto -x$, which is clearly smooth.
     \item
+      Let $z = a + bi, w = c + di$.
+      $z\overline{w} = ac + bd + i(bc - ad)$ and $w\overline{z} = (ac + bd) - i(bc - ad)$.
+      Then $z\overline{w} + w\overline{z} = 2(ac + bd) = 2\Re(z\overline{w})$ and $i(w\overline{z} - z\overline{w}) = 2\Im(z\overline{w})$.
+      \begin{align*}
+        (2\Re(z\overline{w}))^2 + (2\Im(z\overline{w}))^2 + (\abs{z}^2 - \abs{w}^2)^2
+          &= 4\abs{z\overline{w}}^2 + (\abs{z}^2 - \abs{w}^2)^2 \\
+          &= 4\abs{z}^2\abs{\overline{w}}^2 + (\abs{z}^2 - \abs{w}^2)^2 \\
+          &= (\abs{z}^2 + \abs{w}^2)^2 \\
+          &= 1.
+      \end{align*}
+      Therefore, $F$ indeed maps $S^3$ into $S^2$.
+      Moreover, this map is continuous.
       \todo[inline,caption={}]{
-        What does this map even represent?
+        Show that $F$ is smooth.
       }
   \end{enumerate}
 \end{proof}
