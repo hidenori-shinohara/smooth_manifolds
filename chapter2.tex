@@ -379,8 +379,9 @@
       \end{align*}
       Therefore, $F$ indeed maps $S^3$ into $S^2$.
       Moreover, this map is continuous.
-      \todo[inline,caption={}]{
-        Show that $F$ is smooth.
-      }
+      Let $(z = a + bi, w = c + di) \in S^3$ be given.
+      Suppose that $(U_4^{+}, \phi_4^{+})$ and $(V_3^{+}, \psi_3^{+})$ are charts containing $(z, w)$ and $F(z, w)$.
+      Then $\psi_3^{+} \circ F \circ \phi_4^{+}: (a, b, c) \mapsto (2u, 2v)$ where $u + iv = (a + bi)(c - \sqrt{1 - a^2 - b^2 - c^2}i)$ which is a smooth map from $\phi_4^{+}(U_4^{+}) \subset \mathbb{R}^3$ into $\mathbb{R}^2$.
+      Other cases are similar, and thus $F$ is smooth by Proposition 2.5(b).
   \end{enumerate}
 \end{proof}
