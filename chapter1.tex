@@ -322,8 +322,14 @@
       For any $x \in S^n \setminus \{ N \}$, show that $\sigma(x) = u$, where $(u, 0)$ is the point where the line through $N$ and $x$ intersects the linear subspace where $x^{n + 1} = 0$.
       Similarly, show that $\tilde{\sigma}(x)$ is the point where the line through $S$ and $x$ intersects the same subspace.
     \item
+      Show that $\sigma$ is bijective, and
+      \begin{align*}
+        \sigma^{-1}(u^1, \cdots, u^n) = \frac{(2u^1, \cdots, 2u^n, \abs{u}^2 - 1)}{\abs{u}^2 + 1}.
+      \end{align*}
     \item
+      Compute the transition map $\tilde{\sigma} \circ \sigma^{-1}$ and verify that the atlas consisting of the two charts $(S^n \setminus \{ N \}, \sigma)$ and $(S^n \setminus \{ S \}, \hat{\sigma})$ defines a smooth structure on $S^n$.
     \item
+      Show that this smooth structure is the same as the one defined in Example 1.31.
   \end{enumerate}
 \end{customprob}
 
@@ -333,6 +339,7 @@
     \caption{Problem 1-7}
     \label{fig:problem_1_7}
   \end{figure}
+  $ $
   \begin{enumerate}[label=(\alph*)]
     \item 
       This is trivial from a basic trigonometry argument using the triangles $N, (0, \cdots, 0, x^{n + 1}), (x^1, \cdots, x^{n + 1})$ and $N, (0, \cdots, 0), \sigma(x^1, \cdots, x^{n + 1})$.
