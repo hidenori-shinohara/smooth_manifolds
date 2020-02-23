@@ -328,13 +328,20 @@
 \end{customprob}
 
 \begin{proof}
-  $ $
+  \begin{figure}[!htb]
+    \includegraphics[width=.5\linewidth]{img/problem_1_7.jpeg}
+    \caption{Problem 1-7}
+    \label{fig:problem_1_7}
+  \end{figure}
   \begin{enumerate}[label=(\alph*)]
     \item 
       This is trivial from a basic trigonometry argument using the triangles $N, (0, \cdots, 0, x^{n + 1}), (x^1, \cdots, x^{n + 1})$ and $N, (0, \cdots, 0), \sigma(x^1, \cdots, x^{n + 1})$.
     \item
       $\sigma \circ \sigma^{-1}$ and $\sigma^{-1} \circ \sigma$ are both the identity maps, so $\sigma$ is bijective and $\sigma^{-1}$ is its inverse.
     \item
+      Computation shows that $\tilde{\sigma} \circ \sigma^{-1}: S^n \setminus \{ N, S \} \rightarrow S^n \setminus \{ N, S \}$ sends $(u^1, \cdots, u^n)$ to $(u^1, \cdots, u^n) / \abs{u}^2$.
+      As $\abs{u} \ne 0$ in the domain, this map is well-defined and clearly smooth.
+      By Proposition 1.17(a), these two charts determine a unique smooth structure.
     \item
   \end{enumerate}
 \end{proof}
