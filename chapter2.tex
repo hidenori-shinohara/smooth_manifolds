@@ -409,3 +409,33 @@
       }
   \end{enumerate}
 \end{proof}
+
+\begin{customprob}{2-6}
+  Let $P: \mathbb{R}^{n + 1} \setminus \{ 0 \} \rightarrow \mathbb{R}^{k + 1} \setminus \{ 0 \}$ be a smooth function, and suppose that for some $d \in \mathbb{Z}$, $P(\lambda x) = \lambda^dP(x)$ for all $\lambda \in \mathbb{R} \setminus \{ 0 \}$ and $x \in \mathbb{R}^{n + 1} \setminus \{ 0 \}$.
+  Show that the map $\tilde{P}: \RP^n \rightarrow \RP^k$ defined by $\tilde{P}([x]) = [P(x)]$ is well defined and smooth.
+\end{customprob}
+
+\begin{proof}
+  Let $P_1, \cdots, P_{k + 1}$ denote the component functions of $P$.
+
+  Suppose $[x_1:\cdots:x_{n + 1}] = [y_1:\cdots:y_{n + 1}]$.
+  Then there exists $\lambda \ne 0$ such that $(y_1, \cdots, y_{n + 1}) = (\lambda x_1, \cdots, \lambda x_{n + 1})$.
+  $P(y_1, \cdots, y_{n + 1}) = P(\lambda x_1, \cdots, \lambda x_{n + 1}) = \lambda^dP(x_1, \cdots, x_{n + 1})$.
+  Since $\lambda^d \ne 0$, $[P(y_1, \cdots, y_{n + 1})] = [P(x_1, \cdots, x_{n + 1})]$.
+  Therefore, $\tilde{P}$ is well-defined.
+
+  Let $\tilde{p} = [p_1:\cdots:p_{n + 1}] \in \RP^n$ be given.
+  Without loss of generality, assume $p_{n + 1} \ne 0$.
+  Consider the chart $(U, \psi_{n + 1})$ with $U = \{ [x_1:\cdots:x_{n + 1}] \mid x_{n + 1} \ne 0 \}$.
+  Let $q_i = P_i(p_1, \cdots, p_{n + 1})$.
+  Without loss of generality, assume $q_{k + 1} \ne 0$.
+  Then $\tilde{P}(\tilde{p})$ is contained in $V = \{ [y_1:\cdots:y_{k + 1}] \mid y_{k + 1} \ne 0 \}$.
+  Since $P$ is smooth, there exists $0 < \delta < \abs{x_{n + 1}}$ such that $\abs{(x_1, \cdots, x_{n + 1}) - (p_1, \cdots, p_{n + 1})} < \delta$ implies $P_{k + 1}(x_1, \cdots, x_{n + 1}) \ne 0$.
+  Then $[p_1:\cdots:p_{n+1}] \in \pi(B(p_1, \cdots, p_{n + 1})) \subset U \cap F^{-1}(V)$.
+  Therefore, $U \cap F^{-1}(V)$ is open in $\RP^n$.
+
+  Finally the composition map $\psi_{k + 1} \cdot \tilde{P} \cdot \phi_{n + 1}^{-1}$ sends $(x_1 / x_{n + 1}, \cdots, x_n / x_{n + 1})$ to $(y_1 / y_{k + 1}, \cdots, y_k / y_{k + 1})$ where $y_i = P_i(x_1, \cdots, x_{n + 1})$.
+  In other words, $(x_1, \cdots, x_n) \mapsto (y_1 / y_{k + 1}, \cdots, y_k / y_{k + 1})$ where $y_i = P_i(x_1, \cdots, x_n, 1)$.
+  Since each $P_i$ is smooth, this map must be smooth as well.
+  By (\ref{proof_prop_2_5}), $\tilde{P}$ is smooth.
+\end{proof}
