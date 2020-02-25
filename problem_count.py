@@ -3,6 +3,7 @@ exercise_cnt = []
 problem_cnt = []
 total = 0
 total_chapter_number = 4
+chapter_names = ["Smooth Manifolds", "Smooth Maps", "Tangent Vectors", "Submersions and Immersions"]
 for ch in range(1, total_chapter_number + 1):
     fobj = open("chapter" + str(ch) + ".tex", "r")
     excnt = 0
@@ -16,14 +17,15 @@ for ch in range(1, total_chapter_number + 1):
     problem_cnt.append(prcnt)
     total += excnt + prcnt
 
-print("Total number of problems + exercises: %d" % total)
+print("Total number of problems + exercises that I have worked on: %d" % total)
 print
 
 
 for ch in range(1, total_chapter_number + 1):
-    print("Chapter %d: %2d exercises, %2d problems" % (ch, exercise_cnt[ch - 1], problem_cnt[ch - 1]))
+    print("Chapter %d: %-30s | %2d exercises, %2d problems" % (ch, chapter_names[ch - 1], exercise_cnt[ch - 1], problem_cnt[ch - 1]))
 
 print
+print("# = exercise, $ = problem")
 
 for ch in range(1, total_chapter_number + 1):
     bar = ''
