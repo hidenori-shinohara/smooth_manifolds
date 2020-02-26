@@ -358,6 +358,38 @@
   \end{enumerate}
 \end{proof}
 
+\begin{customprob}{1-8}
+  By identifying $\mathbb{R}^2$ with $\mathbb{C}$, we can think of the unit circle $S^1$ as a subset of the complex plane.
+  An angle function on a subset $U \subset S^1$ is a continuous function $\theta: U \rightarrow \mathbb{R}$ such that $e^{i\theta(z)} = z$ for all $z \in U$.
+  Show that there exists an angle function $\theta$ on an open subset $U \subset S^1$ if and only if $U \ne S^1$.
+  For any such angle function, show that $(U, \theta)$ is a smooth coordinate chart for $S^1$ with its standard smooth structure.
+\end{customprob}
+
+\begin{proof}
+  First, we will consider the special case when $U = S^1 \setminus \{ e^{it} \}$ for some $t \in \mathbb{R}$.
+  The map $\phi: (t, t + 2\pi) \rightarrow U$ defined by $\theta \mapsto e^{i\theta}$ is a bijective function.
+  Therefore, by taking the inverse of $\phi$, which is clearly continuous, we obtain a desired angle function.
+  The case of an arbitrary proper open subset of $U$ is the same as this special case because we simply need to restrict the domain of the map obtained above.
+  On the other hand, suppose $U = S^1$.
+  Suppose there exists an angle function $f$ on $U$.
+  Define $g: S^1 \rightarrow \mathbb{R}$ by $g(z) = f(z) - f(-z)$.
+  \begin{itemize}
+    \item
+      $g(1) \ne 0$ because $g(1) \ne 0 \implies f(1) = f(-1)$, which is clearly impossible.
+    \item
+      $g(1) > 0$ implies that $g(-1) < 0$.
+      By the intermediate value theorem, $g(z) = 0$ for some $z \in S^1$.
+      This is a contradiction.
+    \item
+      If $g(1) < 0$, $g(-1) > 0$, and we obtain a contradiction in the same manner.
+  \end{itemize}
+  Therefore, such an $f$ cannot exist.
+  Hence, an angle function exists if and only if $U$ is an proper open subset of $S^1$.
+  \todo[inline,caption={}]{
+    Finish the second part!
+  }
+\end{proof}
+
 \begin{customprob}{1-12(Proof of Proposition 1.45)}
   Suppose $M_1, \cdots, M_k$ are smooth manifolds and $N$ is a smooth manifold with boundary.
   Then $M_1 \times \cdots \times M_k \times N$ is a smooth manifold with boundary, and $\partial (M_1 \times \cdots \times M_k \times N) = M_1 \times \cdots \times M_k \times \partial N$.
