@@ -385,9 +385,13 @@
   \end{itemize}
   Therefore, such an $f$ cannot exist.
   Hence, an angle function exists if and only if $U$ is an proper open subset of $S^1$.
-  \todo[inline,caption={}]{
-    Finish the second part!
-  }
+
+  Let $(U_i^{\pm}, \phi_i^{\pm})$ and $(U, \phi)$ be given where $\phi$ maps $U$ into $(t, t + 2\pi)$ for some $t \in \mathbb{R}$.
+  We will show that they are smoothly compatible.
+  Let $V = U \cap U_i^{\pm}$.
+  The map $\phi_i^{\pm} \circ \phi^{-1}: \phi(V) \rightarrow \phi_i^{\pm}(V)$ is $\phi_i^{\pm} \circ \exp$.
+  Since it is a composition of a projection map with a smooth map, this is smooth.
+  Therefore, $(U, \phi)$ is indeed a coordinate chart for $S^1$ with its standard smooth structure.
 \end{proof}
 
 \begin{customprob}{1-12(Proof of Proposition 1.45)}
