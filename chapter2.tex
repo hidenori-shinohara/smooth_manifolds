@@ -439,3 +439,23 @@
   Since each $P_i$ is smooth, this map must be smooth as well.
   By (\ref{proof_prop_2_5}), $\tilde{P}$ is smooth.
 \end{proof}
+
+\begin{customprob}{2-7}
+  Let $M$ be a nonempty smooth $n$-manifold with or without boundary, and suppose $n \geq 1$.
+  Show that the vector space $C^{\infty}(M)$ is infinite-dimensional.
+\end{customprob}
+
+\begin{proof}
+  Let $k \in \mathbb{N}$ be given.
+  Let $p \in M$ be chosen arbitrarily.
+  Let $(U, \phi)$ be a smooth chart containing $p$.
+  Then $\hat{U} = \phi(U)$ is an open subset of $\mathbb{R}^n$ or $\mathbb{H}^n$.
+  In each case, we can pick $k$ distinct points $x_1, \cdots, x_k \in \hat{U}$ because $\hat{U}$ is a nonempty open subset and $n \geq 1$.
+  Since $\hat{U}$ is open, there exist open $U_1, \cdots, U_k$ such that $x_i \in U_i \subset \hat{U}$ and $U_i \cap U_j$ whenever $i \ne j$.
+  Moreover, $\{ x_i \}$ is a closed subset.
+  By Proposition 2.25, we obtain $k$ bump functions $f_i$ for $\{ x_i \}$ supported in $U_i$.
+  Extend each $f_i$ by setting $f_i(q) = 0$ for any $q \notin U$.
+  Then each $f_i$ lives in $C^{\infty}(M)$.
+  Clearly, $\sum c_if_i = 0$ implies $c_i = 0$, so $\{ f_1, \cdots, f_k \}$ is linearly independent.
+  Therefore, $C^{\infty}(M)$ is infinite-dimensional.
+\end{proof}
