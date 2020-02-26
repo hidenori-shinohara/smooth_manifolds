@@ -51,6 +51,16 @@
   Note that every topological manifold is a topological manifold with boundary.
 \end{defn}
 
+\begin{defn}[Support]
+  If $f$ is any real-valued or vector-valued function on a topological space $M$, the \textit{support of $f$}, denoted by $\supp f$, is the closure of the set of points where $f$ is nonzero:
+  \begin{align*}
+    \supp f = \overline{\{p \in M : f(p) \ne 0 \}}.
+  \end{align*}
+\end{defn}
+
+\begin{defn}[Bump Function]
+  If $M$ is a topological space, $A \subset M$ is a closed subset, and $U \subset M$ is an open subset containing $A$, a continuous function $\psi: M \rightarrow \mathbb{R}$ is called a \textit{bump function for $A$ supported in $U$} if $0 \leq \psi \leq 1$ on $M$, $\psi \equiv 1$ on $A$, and $\supp \psi \subset U$.
+\end{defn}
 
 \subsection{Smooth Manifolds}
 
