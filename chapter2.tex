@@ -459,3 +459,13 @@
   Clearly, $\sum c_if_i = 0$ implies $c_i = 0$, so $\{ f_1, \cdots, f_k \}$ is linearly independent.
   Therefore, $C^{\infty}(M)$ is infinite-dimensional.
 \end{proof}
+
+\begin{customprob}{2-14}
+  Suppose $A$ and $B$ are disjoint closed subsets of a smooth manifold $M$.
+  Show that there exists $f \in C^{\infty}(M)$ such that $0 \leq f(x) \leq 1$ for all $x \in M$, $f^{-1}(0) = A$ and $f^{-1}(1) = B$.
+\end{customprob}
+
+\begin{proof}
+  By Theorem 2.29, there exist $\alpha, \beta \in C^{\infty}(M)$ such that $\alpha^{-1}(0) = A$ and $\beta^{-1}(0) = B$.
+  Then $f(x) = \alpha(x) / (\alpha(x) + \beta(x))$ is a desired map.
+\end{proof}
