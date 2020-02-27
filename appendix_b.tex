@@ -1,0 +1,16 @@
+\begin{customexer}{B.49}
+  Two norms $\abs{\cdot}_1$ and $\abs{\cdot}_2$ on a vector space $V$ are said to be equivalent if there are positive constants $c, C$ such that
+  \begin{align*}
+    c\abs{v}_1 \leq \abs{v}_2 \leq C\abs{v}_1
+  \end{align*}
+  for all $v \in V$.
+  Show that equivalent norms determine the same topology.
+\end{customexer}
+
+\begin{proof}
+  Such a relation is symmetric for $c\abs{v}_1 \leq \abs{v}_2 \leq C\abs{v}_1$ implies $(1/C)\abs{v}_2 \leq \abs{v}_1 \leq (1/c)\abs{v}_2$.
+  Let $\mathcal{T}_1, \mathcal{T}_2$ be the topologies induced by $\abs{\cdot}_1, \abs{\cdot}_2$.
+  It suffices to show that $\forall v \in V, \forall U \in \mathcal{T}_2, (v \in U \implies \exists r > 0, B_1(v, r) \subset U)$ where $B_1(v, r)$ is the open ball centered at $v$ with the radius $r$ using the $\abs{\cdot}_1$.
+  Since $v \in U$ and $U$ is open, $\exists r > 0$ such that $B_2(v, r) \subset U$.
+  Then for any $w \in V$, $\abs{v - w}_1 \leq \abs{v - w}_2 / c$, so $B_1(v, r / c) \subset B_2(v, r)$.
+\end{proof}
