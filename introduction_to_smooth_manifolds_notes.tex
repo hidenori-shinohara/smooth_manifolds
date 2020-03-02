@@ -44,6 +44,11 @@
   {\renewcommand\theinnercustomprob{#1}\innercustomprob}
   {\endinnercustomprob}
 
+\newtheorem{innercustomthm}{Proposition}
+\newenvironment{customthm}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
+
 \theoremstyle{remark}
 \newtheorem{rem}[thm]{Remark}
 \newtheorem{rems}[thm]{Remarks}

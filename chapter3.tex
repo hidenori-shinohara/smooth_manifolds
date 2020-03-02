@@ -1,4 +1,69 @@
 \subsection{Exercises}
+\begin{customthm}{3.2}
+  Let $a \in \mathbb{R}^n$.
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      For each geometric tangent vector $v_a \in \mathbb{R}^n_a$, the map $D_v\vert_a:C^{\infty}(\mathbb{R}^n) \rightarrow \mathbb{R}$ defined by
+      \begin{align*}
+        D_v\vert_a f = D_vf(a) = \frac{d}{dt}\Big\vert_{t = 0} f(a + tv)
+      \end{align*}
+      is a derivation at $a$.
+    \item
+      The map $v_a \mapsto D_v\vert_a$ is an isomorphism from $\mathbb{R}^n_a$ onto $T_a\mathbb{R}^n$.
+  \end{enumerate}
+\end{customthm}
+
+\begin{proof}
+  $ $
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      $D_v\vert_a$ is linear because $D_v\vert_a(f + cg) = D_v(f + cg)(a) = D_v(f)(a) + cD_vg(a) = D_v\vert_a(f) + cD_v\vert_a(g)$ because directional derivatives are linear.
+      Moreover, the product rule is satisfied because directional derivatives satisfy that.
+      Therefore, $D_v\vert_a$ is a linear map that satisfies directional derivatives, so it is a derivation.
+    \item
+      Let $\phi: \mathbb{R}^n_a \rightarrow T_a\mathbb{R}^n$ be defined such that $v_a \mapsto D_v\vert_a$.
+      We first claim that $\phi$ is linear.
+      \begin{align*}
+        \phi(v_a + cw_a)(f)
+          &= \phi((v + cw)_a)(f) \\
+          &= D_{v + cw}f(a) \\
+          &= D_vf(a) + cD_wf(a) \\
+          &= D_v\vert_a(f) + cD_w\vert_a(f) \\
+          &= \phi(v_a)(f) + c\phi(w_a)(f) \\
+          &= (\phi(v_a) + c\phi(w_a))(f).
+      \end{align*}
+      Next, we claim that $\ker(\phi) = 0$.
+      Let $v_a \in \ker(\phi) \subset \mathbb{R}^n_a$.
+      Let $v_1, \cdots, v_n \in \mathbb{R}^n$ be chosen such that $v_a = \sum_{i=1}^{n} v_ie_i\vert_a$.
+      For each $j$, let $x^j: \mathbb{R}^n \rightarrow \mathbb{R}$ denote the projection map of the $j$th coordinate.
+      Then $0 = D_v\vert_a(x^j) = \frac{d}{dt}\vert_{t = 0}x^j(a + tv) = v_j$ for each $j$.
+      Therefore, $v_1 = \cdots = v_n = 0$, so $\ker(\phi) = 0$.
+      Since $\phi$ is linear, $\phi$ must be injective.
+
+      Lastly, we claim that $\phi$ is surjective.
+      Let $w \in T_a\mathbb{R}^n$ be given.
+      For each $j$, let $v_j = w(x^j)$.
+      Let $v = (v_1, \cdots, v_n)$.
+      We claim that $\phi(v_a) = w$.
+      Let $f \in C^{\infty}(\mathbb{R}^n)$.
+      By Theorem C.15, we can write
+      \begin{align*}
+        f(x) = f(a) + \sum_{i=1}^{n} \frac{\partial f}{\partial x^i}(a)(x^i - a^i) + \sum_{i, j = 1}^{n} (x^i - a^i)(x^j - a^j) \int_{0, 1} F(t) dt
+      \end{align*}
+      where $F(t)$ is some function.
+      Since $(x^i - a^i)$ and $(x^j - a^j)\int_{0, 1} F(t)dt$ vanish at $x = a$, $w((x^i - a^i)(x^j - a^j) \int_{0, 1} F(t) dt) = 0$ for any $i, j$.
+      Therefore, 
+      \begin{align*}
+        w(f)
+          &= w(f(a)) + \sum_{i=1}^{n} \frac{\partial f}{\partial x^i}(a)(w(x^i) - w(a^i)) \\
+          &= \sum_{i=1}^{n} \frac{\partial f}{\partial x^i}(a)w(x^i) \\
+          &= \sum_{i=1}^{n} \frac{\partial f}{\partial x^i}(a)v_i \\
+          &= \phi(v_a)(f)
+      \end{align*}
+      which proves that $\phi$ is surjective.
+  \end{enumerate}
+\end{proof}
+
 \begin{customexer}{3.5(Proof of Lemma 3.4)}
   Suppose $M$ is a smooth manifold with or without boundary, $p \in M, v \in T_pM$, and $f, g \in C^{\infty}(M)$.
   \begin{enumerate}[label=(\alph*)]
