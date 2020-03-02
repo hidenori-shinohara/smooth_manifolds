@@ -140,6 +140,19 @@
   \end{enumerate}
 \end{proof}
 
+\begin{customthm}{3.15}
+  Let $M$ be a smooth $n$-manifold with or without boundary, and let $p \in M$.
+  Then $T_pM$ is an $n$-dimensional vector space, and for any smooth chart $(U, (x^i))$ containing $p$, the coordinate vectors $\partial / \partial x^1\vert_p, \cdots, \partial / \partial x^n\vert_p$ form a basis for $T_pM$.
+\end{customthm}
+
+\begin{proof}
+  By Proposition 3.12, $T_pM$ is an $n$-dimensional vector space.
+  By Corollary 3.3, the $\partial / \partial x^i \vert_{\phi(p)}$ form a basis for $T_{\phi(p)}\mathbb{R}^n$.
+  By Proposition 3.6(d), $d\phi_p:T_pM \rightarrow T_{\phi(p)}\mathbb{R}^n$ is an isomorphism.
+  Since $d\phi_p$ is an isomorphism between vector spaces, $d\phi_p$ sends a basis to a basis.
+  In other words, the $\partial / \partial x^i \vert_p = (d\phi_p)^{-1}(\partial / \partial x^i \vert_{\phi(p)})$ form a basis.
+\end{proof}
+
 \subsection{Problems}
 
 \begin{customprob}{3-1}
