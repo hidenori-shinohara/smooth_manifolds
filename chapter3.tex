@@ -86,7 +86,7 @@
   \end{enumerate}
 \end{proof}
 
-\begin{customexer}{3.7(Proof of Proposition 3.6)}
+\begin{customexer}{3.7(Proof of Proposition 3.6)}\label{proof_prop_3_6}
   Let $M, N$, and $P$ be smooth manifolds with or without boundary, let $F: M \rightarrow N$ and $G: N \rightarrow P$ be smooth maps, and let $p \in M$.
   \begin{enumerate}[label=(\alph*)]
     \item
@@ -138,6 +138,22 @@
       By combining (b) and (c), we obtain $dF_p$ and $dF^{-1}_{F(p)}$ are the inverse of each other.
       Therefore, $dF_p$ is an isomorphism.
   \end{enumerate}
+\end{proof}
+
+\begin{customthm}{3.10}
+  If $M$ is an $n$-dimensional smooth manifold, then for each $p \in M$, the tangent space $T_pM$ is an $n$-dimensional vector space.
+\end{customthm}
+
+\begin{proof}
+  Let $\mathcal{A}$ denote the smooth structure of $M$ and let $p \in M$ be given.
+  Choose $(U, \phi) \in \mathcal{A}$ such that $p \in U$.
+  Then
+  \begin{align*}
+    T_pM \overset{di_p}{\cong} T_pU \overset{d\phi_p}{\cong} T_{\phi(p)} \hat{U} \overset{di_{\phi(p)}}{\cong} T_{\phi(p)}\mathbb{R}^n
+  \end{align*}
+  where $di_p$ is induced by the inclusion map $i: U \rightarrow M$ and $di_{\phi(p)}$ is induced by the inclusion map $: \hat{U} \rightarrow \mathbb{R}^n$.
+  $di_p, d\phi_p, di_{\phi(p)}$ are all isomorphisms by (\ref{proof_prop_3_6}(d)) and Proposition 3.9.
+  Therefore, $\dim(T_pM) = n$.
 \end{proof}
 
 \begin{customthm}{3.15}
