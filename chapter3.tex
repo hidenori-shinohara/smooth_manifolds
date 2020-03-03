@@ -169,6 +169,32 @@
   In other words, the $\partial / \partial x^i \vert_p = (d\phi_p)^{-1}(\partial / \partial x^i \vert_{\phi(p)})$ form a basis.
 \end{proof}
 
+\begin{rem}
+  Let $F: \mathbb{R}^n \rightarrow \mathbb{R}^m$ be a smooth map and let $p \in \mathbb{R}^n$ be given.
+  \begin{align*}
+    dF_p(\frac{\partial}{\partial x^i}\Big\vert_p)(f) 
+      &= \frac{\partial}{\partial x^i}\Big\vert_p(f \circ F) & \text{(definition of $d$)} \\
+      &= \frac{\partial (f \circ F)}{\partial x^i}(p) & \text{(Just a partial derivative of $f \circ F$)} \\
+      &= \sum_{j=1}^{m} \frac{\partial f}{\partial y^j}(F(p))\frac{\partial F^j}{\partial x^i}(p) \\
+      &= \sum_{j=1}^{m} \frac{\partial F^j}{\partial x^i}(p)\frac{\partial f}{\partial y^j}(F(p)) & \text{(Multiplication is commutative in $\mathbb{R}$)} \\
+      &= \sum_{j=1}^{m} \frac{\partial F^j}{\partial x^i}(p)\frac{\partial}{\partial y^j}\Big\vert_{F(p)}(f).
+  \end{align*}
+  Therefore, we obtain that $dF_p(\frac{\partial}{\partial x^i}\big\vert_p) = \sum_{j=1}^{m} \frac{\partial F^j}{\partial x^i}(p)\frac{\partial}{\partial y^j}\big\vert_{F(p)}$.
+  $\{ \partial / \partial x^i \}$ and $\{ \partial / \partial y^j \}$ form bases for $T_p\mathbb{R}^n$ and $T_{F(p)}\mathbb{R}^m$, respectively, so it makes sense to put $dF_p$ is a matrix form.
+  Then we obtain
+
+  \begin{align*}
+    \begin{bmatrix}
+      \frac{\partial F^1}{\partial x^1}(p) & \cdots & \frac{\partial F^1}{\partial x^n}(p) \\
+      \vdots & \ddots & \vdots \\
+      \frac{\partial F^m}{\partial x^1}(p) & \cdots & \frac{\partial F^m}{\partial x^n}(p)
+    \end{bmatrix}
+  \end{align*}
+
+  which is identical to the Jacobian matrix of $F$ at $p$.
+  (Note that it makes sense to discussion the Jacobian matrix of $F$ because $F$ is a map from $\mathbb{R}^m$ to $\mathbb{R}^n$.)
+\end{rem}
+
 \subsection{Problems}
 
 \begin{customprob}{3-1}
