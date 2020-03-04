@@ -255,6 +255,14 @@
       $\hat{U}$ and $\hat{V}$ both live in $\mathbb{R}^n$, so it might seem unnecessary to use both $x^i$ and $\tilde{x}^i$.
       It is actually necessary because we want to use $\partial / \partial x^i$ to talk about the coordinate vectors induced by $\phi$ and $\partial / \partial \tilde{x}^i$ to talk about the coordinate vectors induced by $\psi$.
   \end{itemize}
+
+  Finally, (3.12) in the textbook can be derived as following:
+  \begin{align*}
+    v &= \sum_{i=1}^{n} v^i \frac{\partial}{\partial x^i} \Big\vert_p \\
+      &= \sum_{i=1}^{n} v^i (\sum_{j=1}^{n} \frac{\partial\tilde{x}^j}{\partial x^i}(\hat{p})\frac{\partial}{\partial \tilde{x}^j}\Big\vert_p) & \text{((3.11) in the textbook)}\\
+      &= \sum_{i=1}^{n} (\sum_{j=1}^{n} v^i\frac{\partial\tilde{x}^j}{\partial x^i}(\hat{p})\frac{\partial}{\partial \tilde{x}^j}\Big\vert_p) \\
+      &= \sum_{j=1}^{n} \big[\sum_{i=1}^{n} v^i\frac{\partial\tilde{x}^j}{\partial x^i}(\hat{p})\big]\frac{\partial}{\partial \tilde{x}^j}\Big\vert_p.
+  \end{align*}
 \end{rem}
 
 \subsection{Problems}
