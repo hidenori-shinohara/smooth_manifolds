@@ -231,6 +231,22 @@
   Therefore, even in this general case, $dF_p$ is represented in coordinate bases by the Jacobian matrix of $\hat{F}$.
 \end{rem}
 
+\begin{rem}
+  The notation on P.63 is not easy to understand.
+
+  Let $(U, \phi = (x^i)), (V, \psi = (\tilde{x}^i))$ be two smooth charts on $M$ and $p \in U \cap V$.
+  The textbook denotes the transition map $\psi \circ \phi^{-1}: \phi(U \cap v) \rightarrow \psi(U \cap V)$ by
+  \begin{align*}
+    \psi \circ \phi^{-1}(x) = (\tilde{x}^1(x), \cdots, \tilde{x}^n(x)).
+  \end{align*}
+  What (I think) this really means is
+  \begin{align*}
+    (\psi \circ \phi^{-1})(x^1(p), \cdots, x^n(p)) = (\tilde{x}^1(p), \cdots, \tilde{x}^n(p))
+  \end{align*}
+  for each $p \in U \cap V$.
+  The idea is that $\phi = (x^i)$ is a diffeomorphism, so the textbook decides to denote each point in $\phi(U \cap V)$ by $x$ because every point in $\phi(U \cap V)$ can be denoted by $(x^1(p), \cdots, x^n(p))$ for a unique $p \in U \cap V$.
+\end{rem}
+
 \subsection{Problems}
 
 \begin{customprob}{3-1}
