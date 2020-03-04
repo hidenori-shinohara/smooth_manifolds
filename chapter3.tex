@@ -265,6 +265,29 @@
   \end{align*}
 \end{rem}
 
+\begin{customexer}{3.17}
+  Let $(x, y)$ denote the standard coordinates on $\mathbb{R}^2$.
+  Verify that $(\tilde{x}, \tilde{y})$ are global smooth coordinates on $\mathbb{R}^2$, where
+  \begin{align*}
+    \tilde{x} = x, \quad \tilde{y} = y + x^3.
+  \end{align*}
+  Let $p$ be the point $(1, 0) \in \mathbb{R}^2$ (in standard coordinates), and show that
+  \begin{align*}
+    \frac{\partial}{\partial x}\Big\vert_p \ne \frac{\partial}{\partial \tilde{x}}\Big\vert_p,
+  \end{align*}
+  even though the coordinate function $x$ and $\tilde{x}$ are identically equal.
+\end{customexer}
+
+\begin{proof}
+  The map $(x, y) \mapsto (x, y + x^3)$ is a smooth automorphism on $\mathbb{R}^2$.
+  \begin{align*}
+    \frac{\partial}{\partial x}\Big\vert_p
+      &= \frac{\partial \tilde{x}}{\partial x}(1, 0)\frac{\partial}{\partial \tilde{x}}\Big\vert_p + \frac{\partial \tilde{y}}{\partial x}(1, 0)\frac{\partial}{\partial \tilde{y}}\Big\vert_p & \text{((3.11) in the textbook)} \\
+      &= \frac{\partial}{\partial \tilde{x}}\Big\vert_p + 3\frac{\partial}{\partial \tilde{y}}\Big\vert_p & (\frac{\partial \tilde{y}}{\partial x} = 3x^2) \\
+      &\ne \frac{\partial}{\partial \tilde{x}}\Big\vert_p.
+  \end{align*}
+\end{proof}
+
 \subsection{Problems}
 
 \begin{customprob}{3-1}
