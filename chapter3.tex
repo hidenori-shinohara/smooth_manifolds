@@ -231,7 +231,7 @@
   Therefore, even in this general case, $dF_p$ is represented in coordinate bases by the Jacobian matrix of $\hat{F}$.
 \end{rem}
 
-\begin{rem}
+\begin{rem}\label{remark_3_12}
   The notation on P.63-64 is not easy to understand.
 
   Let $M$ be an $n$-dimensional smooth manifold.
@@ -286,6 +286,34 @@
       &= \frac{\partial}{\partial \tilde{x}}\Big\vert_p + 3\frac{\partial}{\partial \tilde{y}}\Big\vert_p & (\frac{\partial \tilde{y}}{\partial x} = 3x^2) \\
       &\ne \frac{\partial}{\partial \tilde{x}}\Big\vert_p.
   \end{align*}
+\end{proof}
+
+\begin{customexer}{3.19}
+  Suppose $M$ is a smooth manifold with boundary.
+  Show that $TM$ has a natural topology and smooth structure making it into a smooth manifold with boundary, such that if $(U, (x^i))$ is any smooth boundary chart for $M$, then rearranging the coordinates in the natural chart $(\pi^{-1}(U), (x^i, v^i))$ for $TM$ yields a boundary chart $(\pi^{-1}(U), (v^i, x^i))$.
+\end{customexer}
+
+\begin{proof}
+  The proof is similar to that of Proposition 3.18.
+  We begin by defining the maps that will become our smooth charts.
+  Given any smooth (possibly boundary) chart $(U, \phi)$ for $M$, note that $\pi^{-1}(U) \subset TM$ is the set of all tangent vectors to $M$ at all points of $U$.
+  Let $(x^1, \cdots, x^n)$ denote the coordinate functions of $\phi$, and define a map $\tilde{\phi}$ that maps $\pi^{-1}(U)$ into $\mathbb{H}^{2n}$ or $\mathbb{R}^{2n}$ by
+  \begin{align*}
+    \tilde{\phi}(v^i\frac{\partial}{\partial x^i}\Big\vert_p) = (v^1, \cdots, v^n, x^1(p), \cdots, x^n(p)).
+  \end{align*}
+  In case $(U, \phi)$ is a boundary chart, $\tilde(\phi)$ indeed maps $\pi^{-1}(U)$ into $\mathbb{H}^{2n}$ because $x^n(p) \geq 0$.
+  Its image set is $\mathbb{R}^n \times \phi(U)$, which is an open subset of $\mathbb{R}^{2n}$ or $\mathbb{H}^{2n}$.
+  Now suppose we are given two smooth charts $(U, \phi)$ and $(V, \psi)$ for $M$, and let $(\pi^{-1}(U), \tilde{\phi}), (\pi^{-1}(V), \tilde{\psi})$ be the corresponding charts on $TM$. The sets
+  \begin{align*}
+    \tilde{\phi}(\pi^{-1}(U) \cap \pi^{-1}(V)) &= \mathbb{R}^n \times \phi(U \cap V) & \text{and}\\
+    \tilde{\psi}(\pi^{-1}(U) \cap \pi^{-1}(V)) &= \mathbb{R}^n \times \psi(U \cap V)
+  \end{align*}
+  are open in $\mathbb{R}^{2n}$ or $\mathbb{H}^{2n}$, and the transition map $\tilde{\psi} \circ \tilde{\phi}$ can be written explicitly using (\ref{remark_3_12}) as
+  \begin{align*}
+    &(\tilde{\psi} \circ \tilde{\phi}^{-1})(x^1, \cdots, x^n, v^1, \cdots, v^n) \\
+      &= (\frac{\partial \tilde{x}^1}{\partial x^j}(x)v^j, \cdots, \frac{\partial \tilde{x}^n}{\partial x^j}(x)v^j, \tilde{x}^1(x), \cdots, \tilde{x}^n(x)).
+  \end{align*}
+  The rest of the proof is identical to that of Proposition 3.18.
 \end{proof}
 
 \subsection{Problems}
