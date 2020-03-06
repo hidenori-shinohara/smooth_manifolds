@@ -445,21 +445,10 @@
 \end{customprob}
 
 \begin{proof}
-  Let $(p, v) \times (q, w) \in TM \times TN$ be given.
-  Then define $\sigma: C^{\infty}(M \times N) \rightarrow \mathbb{R}$ such that for all $F: M \times N \rightarrow \mathbb{R}$
-  \begin{align*}
-    \sigma(F) = v(x \mapsto F(x, q)) + w(y \mapsto F(p, y)).
-  \end{align*}
-  Then $\sigma \in T(M \times N)$ because it is clearly continuous and
-  \begin{align*}
-    \sigma(FG)
-      &= v(x \mapsto F(x, q)G(x, q)) + w(y \mapsto F(p, y)G(p, y)) \\
-      &= (v(x \mapsto F(x, q))G(p, q) + F(p, q)v(x \mapsto G(x, q))) + (w(y \mapsto F(p, y))G(p, q) + F(p, q)w(y \mapsto G(p, y))) \\
-      &= (v(x \mapsto F(x, q)) + w(y \mapsto F(p, y)))G(p, q) + (v(x \mapsto G(x, q)) + w(y \mapsto G(p, y)))F(p, q) \\
-      &= \sigma(F)G(p, q) + \sigma(G)F(p, q).
-  \end{align*}
-  We define $\Phi: TM \times TN \rightarrow T(M \times N)$ to be the map $(p, v) \times (q, w) \mapsto ((p, q), \sigma)$ where $\sigma$ is defined as above.
-  $\Phi$ is clearly well-defined, and we will show that $\Phi$ is smooth and bijective.
+  Let $\pi_1: M \times N \rightarrow M$ and $\pi_2: M \times N \rightarrow N$ be the obvious projections of the corresponding coordinates.
+  $\pi_1, \pi_2$ are clearly smooth, so Proposition 3.21 shows that $d\pi_1: T(M \times N) \rightarrow TM$ and $d\pi_2: T(M \times N) \rightarrow TN$ are both smooth.
+  By (\ref{exercise_2_16}(b)), $d\pi_1 \times d\pi_2$ is a smooth map.
+  We claim that $d\pi_1 \times d\pi_2$ is bijective.
   \todo[inline,caption={}]{
     Finish this!
   }
