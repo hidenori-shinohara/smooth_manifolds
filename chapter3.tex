@@ -439,3 +439,28 @@
 
   Therefore, $\alpha$ is bijective.
 \end{proof}
+
+\begin{customprob}{3-3}
+  Prove that if $M$ and $N$ are smooth manifolds, then $T(M \times N)$ is diffeomorphic to $TM \times TN$.
+\end{customprob}
+
+\begin{proof}
+  Let $(p, v) \times (q, w) \in TM \times TN$ be given.
+  Then define $\sigma: C^{\infty}(M \times N) \rightarrow \mathbb{R}$ such that for all $F: M \times N \rightarrow \mathbb{R}$
+  \begin{align*}
+    \sigma(F) = v(x \mapsto F(x, q)) + w(y \mapsto F(p, y)).
+  \end{align*}
+  Then $\sigma \in T(M \times N)$ because it is clearly continuous and
+  \begin{align*}
+    \sigma(FG)
+      &= v(x \mapsto F(x, q)G(x, q)) + w(y \mapsto F(p, y)G(p, y)) \\
+      &= (v(x \mapsto F(x, q))G(p, q) + F(p, q)v(x \mapsto G(x, q))) + (w(y \mapsto F(p, y))G(p, q) + F(p, q)w(y \mapsto G(p, y))) \\
+      &= (v(x \mapsto F(x, q)) + w(y \mapsto F(p, y)))G(p, q) + (v(x \mapsto G(x, q)) + w(y \mapsto G(p, y)))F(p, q) \\
+      &= \sigma(F)G(p, q) + \sigma(G)F(p, q).
+  \end{align*}
+  We define $\Phi: TM \times TN \rightarrow T(M \times N)$ to be the map $(p, v) \times (q, w) \mapsto (p \times q, \sigma)$ as discussed above.
+  $\Phi$ is clearly well-defined, and we will show that $\Phi$ is smooth and bijective.
+  \todo[inline,caption={}]{
+    Finish this!
+  }
+\end{proof}
