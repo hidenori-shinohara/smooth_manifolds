@@ -29,3 +29,19 @@
       By (\ref{exercise_4_3_eq_1}), $\dim(d(\pi_i)_p(T_p(M))) = \dim(T_{p_i}M_i)$.
   \end{enumerate}
 \end{proof}
+
+\begin{customexer}{4.4}
+  Show that a composition of smooth submersions is a smooth submersion, and a composition of smooth immersions is a smooth immersion.
+  Give a counterexample to show that a composition of maps of constant rank need not have constant rank.
+\end{customexer}
+
+\begin{proof}
+  Let $M, N, L$ be smooth manifolds with or without boundary, and $F: M \rightarrow N, G: N \rightarrow L$ be given.
+  If $F, G$ are submersions, $dF_p$ and $dG_{F(p)}$ are surjective for each $p$.
+  Then $d(G \circ F)_p = dG_{F(p)} \circ dF_p$ is surjective for each $p$ by (\ref{proof_prop_3_6}).
+  Thus a composition of smooth submersions is a smooth submersion.
+  By the exact same argument, a composition of smooth immersions is a smooth immersion.
+  \todo[inline,caption={}]{
+    Counterexample?
+  }
+\end{proof}
