@@ -448,34 +448,7 @@
   Let $\pi_1: M \times N \rightarrow M$ and $\pi_2: M \times N \rightarrow N$ be the obvious projections of the corresponding coordinates.
   $\pi_1, \pi_2$ are clearly smooth, so Proposition 3.21 shows that $d\pi_1: T(M \times N) \rightarrow TM$ and $d\pi_2: T(M \times N) \rightarrow TN$ are both smooth.
   By (\ref{exercise_2_16}(b)), $d\pi_1 \times d\pi_2$ is a smooth map.
-  We claim that $d\pi_1 \times d\pi_2$ is bijective.
 
-  \begin{itemize}
-    \item
-      Injective?
-    \item
-      Surjective?
-      Let $(p, v) \times (q, w) \in TM \times TN$ be given.
-
-      For simplicity, for any function $F: M \times N \rightarrow \mathbb{R}$, we define $F_p = (x, y) \mapsto F(p, y)$ and $F_q = (x, y) \mapsto F(x, q)$.
-      Then define $\sigma: C^{\infty}(M \times N) \rightarrow \mathbb{R}$ such that for all $F: M \times N \rightarrow \mathbb{R}$
-      \begin{align*}
-        \sigma(F) = v(F_q) + w(F_p).
-      \end{align*}
-      Then $\sigma \in T_{(p, q)}(M \times N)$ because it is clearly continuous and
-      \begin{align*}
-        \sigma(FG)
-          &= v((FG)_q) + w((FG)_p) \\
-          &= (v(F_q)G(p, q) + F(p, q)v(G_q)) + (w(F_p)G(p, q) + F(p, q)w(G_p)) \\
-          &= (v(F_q) + w(F_p))G(p, q) + (v(G_q) + w(G_p))F(p, q) \\
-          &= \sigma(F)G(p, q) + \sigma(G)F(p, q).
-      \end{align*}
-      Then $(d\pi_1 \times d\pi_2)(\sigma) = d\pi_1(\sigma) \times d\pi_2(\sigma)$.
-      Let $f \in C^{\infty}(M)$.
-      Then $d\pi_1(\sigma)(f) = \sigma(f \circ \pi_1) = v((f \circ \pi_1)_q) + w((f \circ \pi_1)_p) = v((f \circ \pi_1)_q) = v(f)$.
-      Thus $d\pi_1(\sigma) = v$.
-      Similarly, $d\pi_2(\sigma) = w$.
-      Therefore, $d\pi_1 \times d\pi_2$ sends $((p, q), \sigma)$ to $(p, v) \times (q, w)$, so $d\pi_1 \times d\pi_2$ is surjective.
-  \end{itemize}
-
+  By (\ref{problem_3_2}), $d\pi_1 \times d\pi_2$ is a bijection between $T_{(p, q)}(M \times N)$ and $T_p(M) \times T_q(N)$.
+  Since $d\pi_1 \times d\pi_2$ sends $((p, q), \sigma)$ to $(p, d\pi_1(\sigma)) \times (q, d\pi_2(\sigma))$, we conclude that $d\pi_1 \times d\pi_2$ is bijective.
 \end{proof}
