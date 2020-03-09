@@ -316,6 +316,34 @@
   The rest of the proof is identical to that of Proposition 3.18.
 \end{proof}
 
+\begin{customthm}{3.21}
+  If $F: M \rightarrow N$ is a smooth map, then its global differential $dF: TM \rightarrow TN$ is a smooth map.
+\end{customthm}
+
+\begin{proof}
+  Let $(p_0, v_0) \in TM$ be given.
+  It suffices to show that $F$ is smooth in an neighborhood around $(p_0, v_0)$.
+  Let $(U, \phi), (V, \psi)$ be given such that $p_0 \in U, F(U) \subset V$ and $F(p_0) \in V$.
+  The set $\pi^{-1}(U)$ is open in $TM$ because that is how we give $TM$ a topology in Proposition 3.18.
+  Moreover, $\pi^{-1}(U)$ is a neighborhood of $(p_0, v_0)$ in $TM$.
+  We will consider the charts $(\pi^{-1}, \tilde{\phi})$ and $(\pi^{-1}(V), \tilde{\psi})$ as defined in Proposition 3.18.
+  Let $(x^1, \cdots, x^m, v^1, \cdots, v^m) \in \tilde{\phi}(\pi^{-1}(U))$.
+  Let $x = (x^1, \cdots, x^m)$ and $p = \phi^{-1}(x)$.
+  Then 
+  \begin{align*}
+    dF_{p}(\frac{\partial}{\partial x^i}\Big\vert_{p}) = \frac{\partial F^j}{\partial x^i}(p)\frac{\partial}{\partial y^j}\Big\vert_{F(p)}
+  \end{align*}
+  by (3.9) in the textbook.
+  Then 
+  \begin{align*}
+    (\tilde{\psi} \circ dF \circ \tilde{\phi}^{-1})(x^1, \cdots, x^m, v^1, \cdots, v^m)
+      &= ((\psi^1 \circ F \circ \phi^{-1})(x), \cdots, (\psi^n \circ F \circ \phi^{-1})(x), \frac{\partial F^1}{\partial x^i}(p)v^i, \cdots, \frac{\partial F^n}{\partial x^i}(p)v^i)
+  \end{align*}
+
+  Since each component function is smooth, $\tilde{\psi} \circ dF \circ \tilde{\phi}^{-1}$ is smooth.
+  Therefore, $dF$ is a smooth map from $TM$ to $TN$.
+\end{proof}
+
 \subsection{Problems}
 
 \begin{customprob}{3-1}
