@@ -368,6 +368,40 @@
   If $p \in \partial M$, then we do the exact same thing as above except that the domain will be $[0, \epsilon)$ if $v_n > 0$ and $(-\epsilon, 0]$ if $v_n \leq 0$.
 \end{proof}
 
+\begin{customthm}{3.24}
+  Let $F: M \rightarrow N$ be a smooth map, and let $\gamma: J \rightarrow M$ be a smooth curve.
+  For any $t_0 \in J$, the velocity at $t = t_0$ of the composite curve $F \circ \gamma: J \rightarrow N$ is given by
+  \begin{align*}
+    (F \circ \gamma)'(t_0) &= dF(\gamma'(t_0)).
+  \end{align*}
+\end{customthm}
+
+\begin{proof}
+  $ $
+  \begin{align*}
+    (F \circ \gamma)'(t_0)
+      &= d(F \circ \gamma)(\frac{d}{dt}\Big\vert_{t_0}) & \text{(definition of the velocity)} \\
+      &= (dF \circ d\gamma)(\frac{d}{dt}\Big\vert_{t_0}) & \text{(Corollary 3.22(a))} \\
+      &= dF(d\gamma(\frac{d}{dt}\Big\vert_{t_0})) \\
+      &= dF(\gamma'(t_0)) & \text{(definition of the velocity)}.
+  \end{align*}
+\end{proof}
+
+\begin{customthm}{3.25}
+  Suppose $F: M \rightarrow N$ is a smooth map, $p \in M$, and $v \in T_pM$.
+  Then
+  \begin{align*}
+    dF_p(v) &= (F \circ \gamma)'(0)
+  \end{align*}
+  for any smooth curve $\gamma: J \rightarrow M$ such that $0 \in J, \gamma(0) = p$, and $\gamma'(0) = v$.
+\end{customthm}
+
+\begin{proof}
+  \todo[inline,caption={}]{
+    Finish this!
+  }
+\end{proof}
+
 \subsection{Problems}
 
 \begin{customprob}{3-1}
