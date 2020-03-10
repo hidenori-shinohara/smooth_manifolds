@@ -169,7 +169,7 @@
   In other words, the $\partial / \partial x^i \vert_p = (d\phi_p)^{-1}(\partial / \partial x^i \vert_{\phi(p)})$ form a basis.
 \end{proof}
 
-\begin{rem}
+\begin{rem}\label{jacobian_differentials}
   The discussion on PP.61-62 shows the connection between differentials and Jacobian matrices.
   Let $F: \mathbb{R}^n \rightarrow \mathbb{R}^m$ be a smooth map and let $p \in \mathbb{R}^n$ be given.
   \begin{align}
@@ -226,7 +226,7 @@
       &= d(\psi^{-1})_{\hat{F}(\hat{p})}(\sum_{j=1}^{m} \frac{\partial \hat{F}^j}{\partial x^i}(\hat{p})\frac{\partial}{\partial y^j}\Big\vert_{\hat{F}(\hat{p})}) & (\text{Discussion above})\\
       &= \sum_{j=1}^{m} \frac{\partial \hat{F}^j}{\partial x^i}(\hat{p}) d(\psi^{-1})_{\hat{F}(\hat{p})}(\frac{\partial}{\partial y^j}\Big\vert_{\hat{F}(\hat{p})}) & (\text{Linearity of a differential})\\
       &= \sum_{j=1}^{m} \frac{\partial \hat{F}^j}{\partial x^i}(\hat{p}) d(\psi^{-1})_{\psi(F(p))}(\frac{\partial}{\partial y^j}\Big\vert_{\psi(F(p))}) & (\text{Diagram above})\\
-      &= \sum_{j=1}^{m} \frac{\partial \hat{F}^j}{\partial x^i}(\hat{p}) \frac{\partial}{\partial y^i} \Big\vert_{F(p)} & (\text{Definition of a coordinate vector}).
+      &= \sum_{j=1}^{m} \frac{\partial \hat{F}^j}{\partial x^i}(\hat{p}) \frac{\partial}{\partial y^j} \Big\vert_{F(p)} & (\text{Definition of a coordinate vector}).
   \end{align*}
   Therefore, even in this general case, $dF_p$ is represented in coordinate bases by the Jacobian matrix of $\hat{F}$.
 \end{rem}
@@ -342,6 +342,28 @@
 
   Since each component function is smooth, $\tilde{\psi} \circ dF \circ \tilde{\phi}^{-1}$ is smooth.
   Therefore, $dF$ is a smooth map from $TM$ to $TN$.
+\end{proof}
+
+\begin{customthm}{3.23}
+  Suppose $M$ is a smooth manifold with or without boundary and $p \in M$.
+  Every $v \in T_pM$ is the velocity of some smooth curve in $M$.
+\end{customthm}
+
+\begin{proof}
+  First, suppose that $p \in \Int M$.
+  Let $(U, \phi)$ be a smooth coordinate chart centered at $p$, and write $v = v^i \partial / \partial x^i\vert_p$ in terms of the coordinate basis.
+  Without loss of generality, $\phi(p) = 0 \in \mathbb{R}^n$.
+  Now, define $\hat{\gamma}: (-\epsilon, \epsilon) \rightarrow \hat{U}$ by $\hat{\gamma}(t) = (tv_1, \cdots, tv_n)$ for sufficiently small $\epsilon > 0$.
+  Let $\gamma: (-\epsilon, \epsilon) \rightarrow U$ be defined by $\gamma = \phi^{-1} \circ \hat{\gamma}$.
+  Then $\gamma$ is actually a smooth map from a 1-manifold $(-\epsilon, \epsilon)$ to a $n$-manifold $M$ (with or without boundary).
+  We will use the formula derived in (\ref{jacobian_differentials}) and obtain
+  \begin{align*}
+    \gamma'(0)
+      &= d\gamma(\frac{d}{dt}\Big\vert_{0}) \\
+      &= \sum_{j=1}^{n}\frac{\partial\hat{\gamma}^j}{\partial t}(0)\frac{\partial}{\partial x^j}\Big\vert_{p} \\
+      &= \sum_{j=1}^{n}v^j\frac{\partial}{\partial x^j}\Big\vert_{p} \\
+      &= v.
+  \end{align*}
 \end{proof}
 
 \subsection{Problems}
