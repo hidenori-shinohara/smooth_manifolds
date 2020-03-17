@@ -21,6 +21,8 @@
     \item
       Suppose $M_1, \cdots, M_k$ are smooth manifolds.
       Then each of the projection maps $\pi_i: M_1 \times \cdots \times M_k \rightarrow M_i$ is a smooth submersion.
+    \item
+      If $\gamma: J \rightarrow M$ is a smooth curve in a smooth manifold $M$ with or without boundary, then $\gamma$ is a smooth immersion if and only if $\gamma'(t) \ne 0$ for all $t \in J$.
   \end{enumerate}
 \end{customexer}
 
@@ -44,6 +46,11 @@
       However, for each $i$, $d(\pi_i)_p(T_p(M)) \subset T_{p_i}M_i$.
       Thus $\dim(d(\pi_i)_p(T_p(M))) \leq \dim(T_{p_i}M_i) = d_i$.
       By (\ref{exercise_4_3_eq_1}), $\dim(d(\pi_i)_p(T_p(M))) = \dim(T_{p_i}M_i)$.
+    \item
+      $\gamma$ is a smooth immersion if and only if $d\gamma_t: T_tJ \rightarrow T_{\gamma(t)}M$ is injective for each $t \in J$.
+      Since each $T_tJ$ is a 1-dimensional vector space spanned by $d/dt\vert_t$, $d\gamma_t$ is injective if and only if $d\gamma_t$ sends the basis element to a nonzero element.
+      Finally, $\gamma'(t) = d\gamma(d/dt\vert_{t})$.
+      Therefore, $\gamma$ is a smooth immersion if and only if $\gamma'(t) \ne 0$ for all $t \in J$.
   \end{enumerate}
 \end{proof}
 
