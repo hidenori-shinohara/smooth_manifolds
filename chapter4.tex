@@ -1,3 +1,20 @@
+\begin{customthm}{4.1}
+  Suppose $F: M \rightarrow N$ is a smooth map and $p \in M$.
+  If $dF_p$ is surjective, then $p$ has a neighborhood $U$ such that $F\vert_U$ is a submersion.
+  If $dF_p$ is injective, then $p$ has a neighborhood $U$ such that $F\vert_U$ is an immersion.
+\end{customthm}
+
+\begin{proof}
+  Let $(U, \phi)$ be a chart containing $p$ and $(V, \psi)$ be a chart containing $F(p)$.
+  We may assume $F(U) \subset V$.
+  It suffices to show that if the Jacobian of $F$ with respect to $(U, \phi)$ is full rank at $p$, then it is full rank in some neighborhood of $p$ contained in $U$.
+  Example 1.28 in the textbook shows that the set of full rank matrices is an open subset of $M(m \times n, \mathbb{R})$.
+  We will use the notation $J\vert_{q}$ to denote the Jacobian of $F$ with respect to $(U, \phi)$ at $q \in U$.
+  Then $J\vert_{p}$ is an element of an open subset of $M(m \times n, \mathbb{R})$.
+  Each entry of $J\vert_{q}$ is of the from $\frac{\partial}{\partial x^i}(\psi^j \circ F \circ \phi)(\phi(q))$ where each $(\frac{\partial}{\partial x^i}(\psi^j \circ F \circ \phi)) \circ \phi$ is a smooth function.
+  Therefore, there exists a neighborhood of $p$ such that the Jacobian matrix of $F$ with respect to $(U, \phi)$ is full rank.
+\end{proof}
+
 \begin{customexer}{4.3(Verification of Example 4.2)}
   Verify the following claims:
   \begin{enumerate}[label=(\alph*)]
