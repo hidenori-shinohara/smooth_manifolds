@@ -69,3 +69,23 @@
     Counterexample?
   }
 \end{proof}
+
+\begin{customthm}{4.5}
+  Suppose $M$ and $N$ are smooth manifolds, and $F: M \rightarrow N$ is a smooth map.
+  If $p \in M$ is a point such that $dF_p$ is invertible, then there are connected neighborhoods $U_0$ of $p$ and $V_0$ of $F(p)$ such that $F\vert_{U_0}: U_0 \rightarrow V_0$ is a diffeomorphism.
+\end{customthm}
+
+\begin{proof}
+  Since $dF_p$ is invertible, $\dim(T_pM) = \dim(T_{F(p)}N)$.
+  Let $n = \dim(T_pM)$.
+  By (\ref{proposition_3_10}), $n$ is the dimension of $M$ and $N$.
+  Let $(U, \phi), (V, \psi)$ be smooth charts containing $p, F(p)$, respectively, such that $\phi(p) = \psi(F(p)) = 0 \in \mathbb{R}^n$ and $F(U) \subset V$.
+  Let $\hat{F} = \psi \circ F \circ \phi^{-1}$.
+  Then $\hat{F}$ is a smooth map from an open subset $\hat{U} \subset \mathbb{R}^n$ into an open subset $\hat{V} \subset \mathbb{R}^n$.
+  Then $d\hat{F}\vert_0 = d\psi_{F(p)} \circ dF_p \circ d\phi^{-1}_0$.
+  Each function on the right hand side is bijective, so $d\hat{F}\vert_0$ is bijective.
+  Since the differential of a smooth map between Euclidean spaces coincides with the total derivative of the map, we may apply the ordinary inverse function theorem.
+  Thus there exist connected open subsets $\hat{U}_0 \subset \hat{U}$ and $\hat{V}_0 \subset \hat{V}$ both containing 0 such that $\hat{F}$ is a diffeomorphism from $\hat{U}_0$ to $\hat{V}_0$.
+  Since $\phi$ and $\psi$ are homeomorphisms, $U_0$ and $V_0$ are connected neighborhoods of $p$ and $F(p)$ respectively.
+  Finally, since $F = \psi^{-1} \circ \hat{F} \circ \phi$, $F$ is a diffeomorphism from $U_0$ to $V_0$.
+\end{proof}
