@@ -95,6 +95,8 @@
   \begin{enumerate}[label=(\alph*)]
     \item 
       Every composition of local diffeomorphisms is a local diffeomorphism.
+    \item
+      Every finite product of local diffeomorphisms between smooth manifolds is a local diffeomorphism.
   \end{enumerate}
 \end{customthm}
 
@@ -109,5 +111,13 @@
       Let $W = F^{-1}(F(U) \cap V)$.
       Then $W$ is a neighborhood of $p$ such that $G(F(W)) = G(F(U) \cap V) = G(F(U)) \cap G(V)$, which is open in $N$.
       Moreover, $(G \circ F)\vert_{W}$ is clearly a diffeomorphism because a restriction of a diffeomorphism is a diffeomorphism and the composition of diffeomorphisms is a diffeomorphism.
+    \item
+      Let $M_1, \cdots, M_n, N_1, \cdots, N_n$ be $2n$ smooth manifolds and $F_i: M_i \rightarrow N_i$ be a local diffeomorphism for each $i = 1, \cdots, n$.
+      Let $M = M_1 \times \cdots \times M_n, N = N_1 \times \cdots \times N_n$ and $F = F_1 \times \cdots \times F_n$.
+      Let $p = (p_1, \cdots, p_n) \in M$ be given.
+      Since each $F_i$ is a local diffeomorphism, there exists an open set $U_i$ containing $p_i$ such that $F_i(U_i)$ is open in $N_i$ and $F_i\vert_{U_i}$ is a diffeomorphism for each $i$.
+
+      Then $U = U_1 \times \cdots \times U_n$ is an open subset of $M$ containing $p$ and $F(U) = F_1(U_1) \times \cdots \times F_n(U_n)$ is open in $N$.
+      Since $F\vert_U = F_1\vert_{U_1} \times \cdots \times F_n\vert_{U_n}$, $F\vert_U$ is a diffeomorphism by (\ref{exercise_2_16}(b)).
   \end{enumerate}
 \end{proof}
