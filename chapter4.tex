@@ -135,9 +135,12 @@
       Then $F(U_p \cap U) = F(U_p) \cap F(U)$ is open in $N$.
       Since $F(U) = \cup_{p \in U} (F(U_p) \cap F(U))$, $F(U)$ is open in $N$.
     \item
-      \todo[inline,caption={}]{
-        Solve this!
-      }
+      Let $F:M \rightarrow N$ be a local diffeomorphism.
+      Let $U \subset M$ be an open submanifold with or without boundary.
+      For every $p \in U$, there exists a neighborhood $U_p$ of $p$ in $M$ such that $F(U_p)$ is open in $N$ and $F\vert_{U_p}$ is a diffeomorphism.
+      Since $U_p \cap U$ is open in $M$, $F(U_p \cap U)$ is open in $N$.
+      Moreover, $F\vert_{U_p \cap U}$ is a diffeomorphism.
+      Thus $F\vert_{U}$ is a local diffeomorphism.
     \item
       Let $F:M \rightarrow N$ be a diffeomorphism.
       For every point $p \in M$, the ``restriction" of $F$ to $M$ satisfies the definition.
