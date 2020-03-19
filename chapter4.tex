@@ -70,7 +70,7 @@
   }
 \end{proof}
 
-\begin{customthm}{4.5}
+\begin{customthm}{4.5}\label{prop_4_5}
   Suppose $M$ and $N$ are smooth manifolds, and $F: M \rightarrow N$ is a smooth map.
   If $p \in M$ is a point such that $dF_p$ is invertible, then there are connected neighborhoods $U_0$ of $p$ and $V_0$ of $F(p)$ such that $F\vert_{U_0}: U_0 \rightarrow V_0$ is a diffeomorphism.
 \end{customthm}
@@ -149,4 +149,33 @@
     \item
       A local diffeomorphism is smooth, so a bijective local diffeomorphism is a diffeomorphism.
   \end{enumerate}
+\end{proof}
+
+\begin{customexer}{4.8}
+  Suppose $M$ and $N$ are smooth manifolds (without boundary), and $F: M \rightarrow N$ is a map.
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      $F$ is a local diffeomorphism if and only if it is both a smooth immersion and a smooth submersion.
+    \item
+      If $\dim M = \dim N$ and $F$ is either a smooth immersion or a smooth submersion, then it is a local diffeomorphism.
+  \end{enumerate}
+\end{customexer}
+
+\begin{proof}
+  Suppose that $F$ is a local diffeomorphism.
+  Let $p \in M$.
+  Then $p$ has a neighborhood $U$ such that $F\vert_U$ is a diffeomorphism.
+  Then $d(F\vert_U)_p$ is an isomorphism by (\ref{proof_prop_3_6}).
+  Clearly, $dF_p = d(F\vert_U)_p$.
+  Therefore, $dF_p$ is an isomorphism for each $p$.
+  In other words, $F$ is both a smooth immersion and submersion.
+
+  Suppose that $F$ is both a smooth immersion and submersion.
+  Then $dF_p$ is injective and surjective for each $p \in M$.
+  Therefore, $dF_p$ is invertible for each $p \in M$.
+  By (\ref{prop_4_5}), there exist open sets $U, V$ containing $p, F(p)$ such that $F:U \rightarrow V$ is a diffeomorphism.
+  This is exactly the definition of a local diffeomorphism.
+
+  Since $\dim M = \dim N$, either the injectivity or surjectivity of $dF_p$ implies that $dF_p$ is an isomorphism.
+  Then (b) follows from (a).
 \end{proof}
