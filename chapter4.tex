@@ -97,6 +97,8 @@
       Every composition of local diffeomorphisms is a local diffeomorphism.
     \item
       Every finite product of local diffeomorphisms between smooth manifolds is a local diffeomorphism.
+    \item
+      Every local diffeomorphism is a local homeomorphism and an open map.
   \end{enumerate}
 \end{customthm}
 
@@ -119,5 +121,14 @@
 
       Then $U = U_1 \times \cdots \times U_n$ is an open subset of $M$ containing $p$ and $F(U) = F_1(U_1) \times \cdots \times F_n(U_n)$ is open in $N$.
       Since $F\vert_U = F_1\vert_{U_1} \times \cdots \times F_n\vert_{U_n}$, $F\vert_U$ is a diffeomorphism by (\ref{exercise_2_16}(b)).
+    \item
+      A diffeomorphism is a homeomorphism, so a local diffeomorphism is a local homeomorphism.
+      Let $F: M \rightarrow N$ be a local diffeomorphism and an open set $U \subset M$ be given.
+      For every $p \in U$, there exists a neighborhood $U_p$ of $p$ such that $F(U_p)$ is open and $F\vert_{U_p}$ is a diffeomorphism.
+      $U_p \cap U$ is open in $M$.
+      Since $F\vert_{U_p}$ is a diffeomorphism, $F\vert_{U_p}(U_p \cap U) = F(U_p \cap U)$ is open in $F(U_p)$.
+      Since $F(U_p)$ is open, $F(U_p \cap U)$ is open in $N$.
+      Then $F(U_p \cap U) = F(U_p) \cap F(U)$ is open in $N$.
+      Since $F(U) = \cup_{p \in U} (F(U_p) \cap F(U))$, $F(U)$ is open in $N$.
   \end{enumerate}
 \end{proof}
