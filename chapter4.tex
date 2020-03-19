@@ -89,3 +89,25 @@
   Since $\phi$ and $\psi$ are homeomorphisms, $U_0$ and $V_0$ are connected neighborhoods of $p$ and $F(p)$ respectively.
   Finally, since $F = \psi^{-1} \circ \hat{F} \circ \phi$, $F$ is a diffeomorphism from $U_0$ to $V_0$.
 \end{proof}
+
+\begin{customthm}{4.6}
+  $ $
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      Every composition of local diffeomorphisms is a local diffeomorphism.
+  \end{enumerate}
+\end{customthm}
+
+\begin{proof}
+  $ $
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      Let $L, M, N$ be manifolds with or without boundary.
+      Let $F: L \rightarrow M$ and $G: M \rightarrow N$ be local diffeomorphisms.
+      Let $p \in L$.
+      Then there exist open sets $U, V$ containing $p, F(p)$, respectively, such that $F(U), G(V)$ are open, and $F\vert_U, G\vert_V$ are diffeomorphisms.
+      Let $W = F^{-1}(F(U) \cap V)$.
+      Then $W$ is a neighborhood of $p$ such that $G(F(W)) = G(F(U) \cap V) = G(F(U)) \cap G(V)$, which is open in $N$.
+      Moreover, $(G \circ F)\vert_{W}$ is clearly a diffeomorphism because a restriction of a diffeomorphism is a diffeomorphism and the composition of diffeomorphisms is a diffeomorphism.
+  \end{enumerate}
+\end{proof}
