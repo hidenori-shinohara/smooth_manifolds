@@ -179,3 +179,33 @@
   Since $\dim M = \dim N$, either the injectivity or surjectivity of $dF_p$ implies that $dF_p$ is an isomorphism.
   Then (b) follows from (a).
 \end{proof}
+
+\begin{customthm}{4.13}
+  Let $M$ and $N$ be smooth manifolds, let $F: M \rightarrow N$ be a smooth map, and suppose $M$ is connected.
+  Then the following are equivalent:
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      For each $p \in M$ there exist smooth charts containing $p$ and $F(p)$ in which the coordinate representation of $F$ is linear.
+    \item
+      $F$ has constant rank.
+  \end{enumerate}
+\end{customthm}
+
+\begin{proof}
+  Suppose (a).
+  Let $p \in M$.
+  Then the coordinate representation of $dF$ is linear in some neighborhood $U$ of $p$.
+  This implies that the rank of $dF$ is constant in $U$.
+  Since $M$ is connected, this implies that the rank of $dF$ is constant throughout $M$.
+
+  On the other hand, suppose (b).
+  Let $p \in M$.
+  Then the rank theorem guarantees the existence of smooth charts $(U, \phi)$ for $M$ centered at $p$ and $(V, \psi)$ for $N$ centered at $F(p)$ such that $F(U) \subset V$ in which $F$ has a coordinate representation of the form $\hat{F}(x^1, \cdots, x^r, x^{r + 1}, \cdots, x^m) = (x^1, \cdots, x^r, 0, \cdots, 0)$.
+  $\hat{F}$ is clearly linear because 
+  \begin{align*}
+    \hat{F}(c(x^1, \cdots, x^m) + (y^1, \cdots, y^m))
+      &= \hat{F}(cx^1 + y^1, \cdots, cx^m + y^m) \\
+      &= (cx^1 + y^1, \cdots, cx^r + y^r, 0, \cdots, 0) \\
+      &= c(x^1, \cdots, x^r, 0, \cdots, 0) + (y^1, \cdots, y^r, 0, \cdots, 0).
+  \end{align*}
+\end{proof}
