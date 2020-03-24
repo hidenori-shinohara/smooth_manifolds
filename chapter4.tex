@@ -225,6 +225,13 @@
   \begin{enumerate}[label=(\alph*)]
     \item 
       If $M$ is a smooth manifold with or without boundary and $U \subset M$ is an open submanifold, the inclusion map $U \mapsto M$ is a smooth embedding.
+    \item
+      If $M_1, \cdots, M_k$ are smooth manifolds and $p_i \in M_i$ are arbitrarily chosen points, each of the maps $i_j: M_j \rightarrow M_1 \times \cdots \times M_k$ given by
+      \begin{align*}
+        i_j(q) = (p_1, \cdots, p_{j - 1}, q, p_{j + 1}, \cdots, p_k)
+      \end{align*}
+      is a smooth embedding.
+      In particular, the inclusion map $\mathbb{R}^n \rightarrow \mathbb{R}^{n + k}$ given by sending $(x^1, \cdots, x^n)$ to $(x^1, \cdots, x^n, 0, \cdots, 0)$ is a smooth embedding.
   \end{enumerate}
 \end{customexmp}
 
@@ -235,5 +242,11 @@
       $i$ is clearly a topological embedding.
       By Proposition 3.9, $di_p: T_pU \rightarrow T_pM$ is an isomorphism for each $p \in U$.
       Therefore, $i$ is a smooth immersion, which means $i$ is a smooth embedding.
+    \item
+      Since a cross product of finitely many smooth manifolds is a smooth manifold, it suffices to show that $i: M \rightarrow M \times N$ is a smooth embedding.
+      $i$ is clearly a topological embedding.
+      Moreover, for any $p \in M$, $d(\pi_1)_p \circ di_p = d(\pi_1 \circ i)_p = d\Id_p = \Id$, so $di_p$ must be injective.
+      In other words, $i$ is a smooth immersion.
+      Therefore, $i$ is a smooth embedding.
   \end{enumerate}
 \end{proof}
