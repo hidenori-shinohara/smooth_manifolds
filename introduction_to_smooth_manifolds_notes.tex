@@ -49,6 +49,11 @@
   {\renewcommand\theinnercustomthm{#1}\innercustomthm}
   {\endinnercustomthm}
 
+\newtheorem{innercustomexmp}{Example}
+\newenvironment{customexmp}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
+
 \theoremstyle{remar}
 \newtheorem*{rem}{Remark}
 \newtheorem{rems}[thm]{Remarks}
